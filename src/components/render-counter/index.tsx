@@ -7,7 +7,7 @@ import { useMatches } from "react-router-dom";
 const Explanation: React.FC = () => {
   const match = useMatches();
 
-  const handle = match[match.length - 1].handle;
+  const handle = match[match.length - 1].handle as Record<string, string>;
 
   return (
     <>
