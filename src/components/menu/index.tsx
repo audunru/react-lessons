@@ -9,13 +9,13 @@ export const Menu: React.FC<PropsWithChildren> = (props) => {
 
   const handleClick = () => {
     if (isMenuOpen) {
-      setIsMenuOpen(false); // Close the menu on any click inside the div
+      setIsMenuOpen(false);
     }
   };
 
   const toggleMenu = (e: React.MouseEvent) => {
-    e.stopPropagation(); // Prevent toggle from immediately closing
-    setIsMenuOpen((prev) => !prev); // Toggle the menu state
+    e.stopPropagation();
+    setIsMenuOpen((prev) => !prev);
   };
 
   const closeMenu = () => {
@@ -26,9 +26,31 @@ export const Menu: React.FC<PropsWithChildren> = (props) => {
 
   return (
     <div ref={menuRef} onClick={handleClick}>
-      <Button onClick={toggleMenu} aria-expanded={isMenuOpen} className={"lg:hidden peer"}>
-        {isMenuOpen ? "Close Menu" : "Open Menu"}
+      <Button
+        onClick={toggleMenu}
+        aria-expanded={isMenuOpen}
+        className="lg:hidden text-lg peer flex items-center space-x-2"
+      >
+        <span className="relative w-6 h-6 flex flex-col justify-center items-center">
+          <span
+            className={`block absolute w-6 h-[2px] bg-white rounded transition-transform duration-300 ease-in-out ${
+              isMenuOpen ? "rotate-45 translate-y-0" : "-translate-y-2"
+            }`}
+          ></span>
+          <span
+            className={`block absolute w-6 h-[2px] bg-white rounded transition-opacity duration-300 ease-in-out ${
+              isMenuOpen ? "opacity-0" : "opacity-100"
+            }`}
+          ></span>
+          <span
+            className={`block absolute w-6 h-[2px] bg-white rounded transition-transform duration-300 ease-in-out ${
+              isMenuOpen ? "-rotate-45 translate-y-0" : "translate-y-2"
+            }`}
+          ></span>
+        </span>
+        <span>{isMenuOpen ? "Close Menu" : "Open Menu"}</span>
       </Button>
+
       {props.children}
     </div>
   );

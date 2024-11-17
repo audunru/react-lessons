@@ -2,6 +2,7 @@ import { PropsWithChildren } from "react";
 
 import { Menu } from "../menu";
 import { MenuItems } from "../menu/menu-items";
+import Footer from "../footer";
 
 export const Container: React.FC<PropsWithChildren> = (props: PropsWithChildren) => {
   return (
@@ -14,6 +15,7 @@ export const Container: React.FC<PropsWithChildren> = (props: PropsWithChildren)
         </div>
         <div className="flex flex-col items-start gap-y-6">{props.children}</div>
       </div>
+      <Footer />
     </div>
   );
 };

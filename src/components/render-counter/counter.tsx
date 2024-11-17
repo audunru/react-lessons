@@ -1,39 +1,45 @@
 import React, { useRef } from "react";
-import colors from "tailwindcss/colors";
 
-const hexToRgb = (hex: string) => {
-  const bigint = parseInt(hex.replace("#", ""), 16);
-  return {
-    r: (bigint >> 16) & 255,
-    g: (bigint >> 8) & 255,
-    b: bigint & 255,
-  };
-};
-
-const greenRgb = hexToRgb(colors.green[500]);
-const redRgb = hexToRgb(colors.red[500]);
-
-const getColor = (value: number) => {
-  const percentage = Math.min((value - 1) / 4, 1); // Transition between 1 and 5
-  const r = Math.round(greenRgb.r + (redRgb.r - greenRgb.r) * percentage).toString(10);
-  const g = Math.round(greenRgb.g + (redRgb.g - greenRgb.g) * percentage).toString(10);
-  const b = Math.round(greenRgb.b + (redRgb.b - greenRgb.b) * percentage).toString(10);
-  return `rgb(${r}, ${g}, ${b})`;
-};
+import clsx from "clsx";
 
 export const Counter: React.FC = () => {
   const count = useRef<number>(0);
 
   count.current++;
 
+  const bgColors = [
+    "bg-red-300",
+    "bg-orange-300",
+    "bg-yellow-300",
+    "bg-green-300",
+    "bg-blue-300",
+    "bg-indigo-300",
+    "bg-violet-300",
+  ];
+
+  const textColors = [
+    "text-red-900",
+    "text-orange-900",
+    "text-yellow-900",
+    "text-green-900",
+    "text-blue-900",
+    "text-indigo-900",
+    "text-violet-900",
+  ];
+
+  // Cycle through the rainbow colors
+  const bgColorClass = bgColors[(count.current - 1) % bgColors.length];
+  const textColorClass = textColors[(count.current - 1) % bgColors.length];
+
   return (
-    <p className="text-xl dark:text-gray-100">
-      Render count:
+    <p className="text-xl ">
+      <span className="dark:text-gray-100">Render count:</span>
       <span
-        className="inline-block w-8 h-8 text-center text-gray-800 rounded-full ml-3"
-        style={{
-          backgroundColor: getColor(count.current),
-        }}
+        className={clsx(
+          "inline-block w-8 h-8 text-center text-gray-800 rounded-full ml-3",
+          bgColorClass,
+          textColorClass
+        )}
       >
         {count.current}
       </span>
