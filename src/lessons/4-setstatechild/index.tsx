@@ -16,7 +16,7 @@ const UseStateWithChildLesson: React.FC = () => {
       <Child />
       <Button
         onClick={() => {
-          setCount(count + 1);
+          setCount((c) => c + 1);
         }}
       >{`Click count: ${count.toString(10)}`}</Button>
     </>
