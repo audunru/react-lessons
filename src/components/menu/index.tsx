@@ -27,11 +27,7 @@ export const Menu: React.FC<PropsWithChildren> = (props) => {
 
   return (
     <div ref={menuRef} onClick={handleClick}>
-      <Button
-        onClick={toggleMenu}
-        aria-expanded={isMenuOpen}
-        className="lg:hidden text-lg peer flex items-center space-x-2"
-      >
+      <Button onClick={toggleMenu} aria-expanded={isMenuOpen} className="lg:hidden peer flex items-center space-x-2">
         <span className="relative w-6 h-6 flex flex-col justify-center items-center">
           <span
             className={clsx(
