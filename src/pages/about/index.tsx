@@ -2,7 +2,7 @@ import Paragraph from "../../components/paragraph";
 import SubTitle from "../../components/sub-title";
 import Title from "../../components/title";
 
-export const Home: React.FC = () => {
+const About: React.FC = () => {
   return (
     <>
       <Title>React Lessons</Title>
@@ -28,3 +28,5 @@ export const Home: React.FC = () => {
     </>
   );
 };
+
+export default About;

@@ -6,7 +6,6 @@ import { createHashRouter, Outlet, RouteObject } from "react-router-dom";
 import Container from "./components/container";
 import ErrorElement from "./components/error";
 import Code from "./components/lesson-code";
-import { Home } from "./lessons/0-home";
 import RendersOnce from "./lessons/1-renders";
 import RendersOnceCode from "./lessons/1-renders?raw";
 import UseEffect from "./lessons/2-useeffect";
@@ -47,6 +46,7 @@ import PropsLesson from "./lessons/19-props";
 import PropsLessonCode from "./lessons/19-props?raw";
 import MemoLesson from "./lessons/20-memo";
 import MemoLessonCode from "./lessons/20-memo?raw";
+import About from "./pages/about";
 
 export interface Handle {
   title: string;
@@ -57,9 +57,9 @@ export interface Handle {
 export const lessons: RouteObject[] = [
   {
     path: "/",
-    element: <Home />,
+    element: <About />,
     handle: {
-      title: "Home",
+      title: "About",
     } satisfies Handle,
   },
   {
