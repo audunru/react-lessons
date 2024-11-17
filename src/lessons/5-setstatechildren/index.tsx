@@ -3,6 +3,7 @@ import Explanation from "../../components/render-counter";
 import { Button } from "../../components/button";
 
 const Child = () => {
+  // This will *not* render again when parent state changes
   return <Explanation />;
 };
 

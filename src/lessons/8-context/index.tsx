@@ -3,7 +3,7 @@ import Explanation from "../../components/render-counter";
 import { Paragraph } from "../../components/paragraph";
 import { MyProvider, useMyContext } from "./context";
 
-export const ValueSetter: React.FC = () => {
+export const UpdateContext: React.FC = () => {
   const { setValue } = useMyContext();
 
   return <Button onClick={() => setValue(new Date().toISOString())}>Update</Button>;
@@ -15,8 +15,8 @@ const ReactContext: React.FC = () => {
   return (
     <>
       <Explanation />
-      <Paragraph>Current value: {value}</Paragraph>
-      <ValueSetter />
+      <Paragraph>Last updated: {value}</Paragraph>
+      <UpdateContext />
     </>
   );
 };

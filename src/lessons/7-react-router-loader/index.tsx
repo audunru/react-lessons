@@ -1,6 +1,7 @@
 import Explanation from "../../components/render-counter";
 import { LoaderFunction, useLoaderData } from "react-router-dom";
-import { Paragraph } from "../../components/paragraph";
+import { Code } from "../../components/code";
+import { SubTitle } from "../../components/sub-title";
 
 export const loader: LoaderFunction = async () => {
   const response = await fetch("https://jsonplaceholder.typicode.com/todos/1");
@@ -15,8 +16,8 @@ const ReactRouterLoaderLesson: React.FC = () => {
   return (
     <>
       <Explanation />
-
-      <Paragraph>{`Value is now ${JSON.stringify(value)}`}</Paragraph>
+      <SubTitle>API response</SubTitle>
+      <Code>{JSON.stringify(value, null, 2)}</Code>
     </>
   );
 };

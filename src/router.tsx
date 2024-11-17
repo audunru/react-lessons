@@ -40,7 +40,7 @@ export const lessons: RouteObject[] = [
     },
   },
   {
-    path: "1-functional-components",
+    path: "/1-functional-components",
     element: (
       <>
         <RendersOnce />
@@ -50,7 +50,7 @@ export const lessons: RouteObject[] = [
     handle: {
       title: "Functional components",
       description:
-        "Everything in the function body happens every time the component renders. Don't let the JSX syntax trick you, it's just a function that receives arguments, runs its code and returns a result.",
+        "Don't let the JSX syntax trick you! Functional components are just functions that receive arguments, run their code and return a value.",
     },
   },
   {
@@ -64,7 +64,7 @@ export const lessons: RouteObject[] = [
     handle: {
       title: "useEffect",
       description:
-        "Setting state in useEffect causes an extra render. If you have a value (i.e. from a prop), and you need to transform it into something else, you can just do it in the body of the function.",
+        "Updating state in useEffect causes an extra render. If you have a value (i.e. from a prop), and you need to transform it into something else, you can just do it in the body of the function.",
     },
   },
   {
@@ -91,7 +91,7 @@ export const lessons: RouteObject[] = [
     handle: {
       title: "useState with child",
       description:
-        "Child component rerenders when parent state changes. This child component renders every time state in the parent changes, even though nothing has changed in the child.",
+        "The child component rerenders when parent state changes, even though nothing has changed in the child.",
     },
   },
   {
@@ -104,8 +104,7 @@ export const lessons: RouteObject[] = [
     ),
     handle: {
       title: "useState with children",
-      description:
-        'Using the children prop prevents rerendering. This child component is passed through a children prop, so even though the "parent" state changes, it does not rerender.',
+      description: "Using the children prop prevents rerendering when the parent state changes.",
     },
   },
   {
@@ -133,8 +132,7 @@ export const lessons: RouteObject[] = [
     loader: reactRouterLoader,
     handle: {
       title: "Fetch with React Router",
-      description:
-        "Fetching with React Router. In React Router, you can use loader functions to load data and prepare it before your component renders.",
+      description: "In React Router, you can use loader functions to load data before your component renders.",
     },
   },
   {
@@ -148,11 +146,11 @@ export const lessons: RouteObject[] = [
     handle: {
       title: "React Context",
       description:
-        "Updating the context triggers a render of components that use the context. Child components will rerender even though they don't change.",
+        "Updating the React context triggers a rerender of components that use the context. Child components will rerender even though they don't use the context.",
     },
   },
   {
-    path: "/9-ReactContextLocal",
+    path: "/9-react-context-distributed",
     element: (
       <>
         <ReactContextLocalContainer />
@@ -162,11 +160,11 @@ export const lessons: RouteObject[] = [
     handle: {
       title: "React Context with distributed state",
       description:
-        "Distribute state where it's needed. Updating the state triggers a render of components that use the state.",
+        "Updating the context triggers a rerender of components that use the context. Create separate components to limit the amount of rerendering.",
     },
   },
   {
-    path: "/10-Form",
+    path: "/10-form",
     element: (
       <>
         <Form />
@@ -175,12 +173,11 @@ export const lessons: RouteObject[] = [
     ),
     handle: {
       title: "Form and useState",
-      description:
-        "Typing into an input triggers a render. Every time the input changes, the component state is updated, which triggers a rerender.",
+      description: "Every time the input changes, the component state is updated, which triggers a rerender.",
     },
   },
   {
-    path: "/11-ReactHookForm",
+    path: "/11-react-hook-form",
     element: (
       <>
         <ReactHookForm />
@@ -190,11 +187,11 @@ export const lessons: RouteObject[] = [
     handle: {
       title: "Form with React Hook Form",
       description:
-        "React Hook Form avoids rerenders. The specialized package react-hook-form tries to avoid rerendering.",
+        "The package React Hook Form tries to avoid rerendering. Typing in the input field does not trigger a rerender.",
     },
   },
   {
-    path: "/12-Redux",
+    path: "/12-redux",
     element: (
       <>
         <ReduxContainer />
@@ -204,11 +201,11 @@ export const lessons: RouteObject[] = [
     handle: {
       title: "Redux",
       description:
-        "Updating the redux store triggers a render of components that use the redux store. Child components will rerender even though they don't change.",
+        "Updating the Redux store triggers a rerender of components that use the store. Child components will rerender even though they don't use the store.",
     },
   },
   {
-    path: "/13-ReduxLocal",
+    path: "/13-redux-distributed",
     element: (
       <>
         <ReduxLocalContainer />
@@ -218,7 +215,7 @@ export const lessons: RouteObject[] = [
     handle: {
       title: "Redux with distributed state",
       description:
-        "Redux with distributed state. Updating the state triggers a render of components that use the state.",
+        "Updating the Redux store triggers a rerender of components that use the store. Create separate components to limit the amount of rerendering.",
     },
   },
 ];

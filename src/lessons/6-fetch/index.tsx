@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import Explanation from "../../components/render-counter";
-import { Paragraph } from "../../components/paragraph";
+import { Code } from "../../components/code";
+import { SubTitle } from "../../components/sub-title";
 
 const FetchLesson: React.FC = () => {
   const [value, setValue] = useState();
@@ -18,8 +19,8 @@ const FetchLesson: React.FC = () => {
   return (
     <>
       <Explanation />
-
-      <Paragraph>{`Value is now ${JSON.stringify(value)}`}</Paragraph>
+      <SubTitle>API response</SubTitle>
+      <Code>{JSON.stringify(value, null, 2)}</Code>
     </>
   );
 };

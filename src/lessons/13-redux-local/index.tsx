@@ -6,7 +6,7 @@ import { Paragraph } from "../../components/paragraph";
 
 const ValueDisplay: React.FC = () => {
   const value = useSelector(selectValue);
-  return <Paragraph>Current value: {value}</Paragraph>;
+  return <Paragraph>Last updated: {value}</Paragraph>;
 };
 
 const ReduxDistributed: React.FC = () => {

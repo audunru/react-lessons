@@ -1,20 +1,20 @@
 import Explanation from "../../components/render-counter";
 import { MyProvider, useMyContext } from "../8-context/context";
-import { ValueSetter } from "../8-context";
+import { UpdateContext } from "../8-context";
 import { Paragraph } from "../../components/paragraph";
 
-export const ValueDisplay: React.FC = () => {
+export const ShowContext: React.FC = () => {
   const { value } = useMyContext();
-  return <Paragraph>Current value: {value}</Paragraph>;
+
+  return <Paragraph>Last updated: {value}</Paragraph>;
 };
 
 const ReactContextLocal: React.FC = () => {
   return (
     <>
       <Explanation />
-
-      <ValueDisplay />
-      <ValueSetter />
+      <ShowContext />
+      <UpdateContext />
     </>
   );
 };

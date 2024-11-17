@@ -16,7 +16,7 @@ const Redux: React.FC = () => {
   return (
     <>
       <Explanation />
-      <Paragraph>Current value: {value}</Paragraph>
+      <Paragraph>Last updated: {value}</Paragraph>
       <ValueSetter />
     </>
   );
