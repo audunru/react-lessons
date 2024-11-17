@@ -34,6 +34,8 @@ import ReduxLocalContainer from "./lessons/13-redux-local";
 import ReduxLocalContainerCode from "./lessons/13-redux-local?raw";
 import CssLesson from "./lessons/14-css";
 import CssLessonCode from "./lessons/14-css?raw";
+import CssOnlyLesson from "./lessons/15-css-only";
+import CssOnlyLessonCode from "./lessons/15-css-only?raw";
 
 export interface Handle {
   title: string;
@@ -228,7 +230,7 @@ export const lessons: RouteObject[] = [
     } satisfies Handle,
   },
   {
-    path: "/13-css",
+    path: "/14-css",
     element: (
       <>
         <CssLesson />
@@ -239,6 +241,20 @@ export const lessons: RouteObject[] = [
       title: "CSS Toggle",
       description:
         "State is used to control the aria-expanded attribute on the button for accessibility reasons, but the visibility is controlled by CSS.",
+    } satisfies Handle,
+  },
+  {
+    path: "/15-css-only",
+    element: (
+      <>
+        <CssOnlyLesson />
+        <Code>{CssOnlyLessonCode}</Code>
+      </>
+    ),
+    handle: {
+      title: "CSS Only",
+      description:
+        "Even if a component should respond to user interaction, it's not always necessary to use state to achieve that. Tab through the elements on this page, and a link to the home page will appear.",
     } satisfies Handle,
   },
 ];
