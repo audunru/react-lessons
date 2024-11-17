@@ -4,10 +4,10 @@ import Code from "../../components/code";
 import Loader from "../../components/loader";
 import Paragraph from "../../components/paragraph";
 import RenderCount from "../../components/render-count";
-import { fetchTodo, Todo } from "../6-fetch";
+import { getTodo, Todo } from "../6-fetch";
 
 export const loader: LoaderFunction = async () => {
-  return fetchTodo();
+  return getTodo();
 };
 
 const ReactRouterLoaderLesson: React.FC = () => {

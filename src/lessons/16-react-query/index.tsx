@@ -4,12 +4,12 @@ import Code from "../../components/code";
 import Loader from "../../components/loader";
 import Paragraph from "../../components/paragraph";
 import RenderCount from "../../components/render-count";
-import { fetchTodo, Todo } from "../6-fetch";
+import { getTodo, Todo } from "../6-fetch";
 
 const ReactQuery: React.FC = () => {
   const { data: value, isLoading } = useQuery<Todo>({
     queryKey: ["todo", 1],
-    queryFn: fetchTodo,
+    queryFn: getTodo,
     staleTime: 1000 * 10,
   });
 

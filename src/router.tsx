@@ -39,6 +39,8 @@ import CssOnlyLesson from "./lessons/15-css-only";
 import CssOnlyLessonCode from "./lessons/15-css-only?raw";
 import ReactQuery from "./lessons/16-react-query";
 import ReactQueryCode from "./lessons/16-react-query?raw";
+import ReduxAsyncThunkLesson from "./lessons/17-redux-async-thunk";
+import ReduxAsyncThunkLessonCode from "./lessons/17-redux-async-thunk?raw";
 
 export interface Handle {
   title: string;
@@ -290,6 +292,20 @@ export const lessons: RouteObject[] = [
       group: "Fetch",
       title: "React Query",
       description: "With React Query, you can cache API responses, handle updates, loading and errors easily.",
+    } satisfies Handle,
+  },
+  {
+    path: "/17-redux-async-thunk",
+    element: (
+      <>
+        <ReduxAsyncThunkLesson />
+        <Code>{ReduxAsyncThunkLessonCode}</Code>
+      </>
+    ),
+    handle: {
+      group: "Fetch",
+      title: "Redux Async Thunk",
+      description: "",
     } satisfies Handle,
   },
 ];
