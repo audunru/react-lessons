@@ -32,7 +32,7 @@ export const Counter: React.FC = () => {
   const textColorClass = textColors[(count.current - 1) % bgColors.length];
 
   return (
-    <p className="text-xl ">
+    <p className="text-xl" role="status" aria-live="polite">
       <span className="dark:text-gray-100">Render count:</span>
       <span
         className={clsx(
