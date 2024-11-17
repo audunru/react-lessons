@@ -43,6 +43,10 @@ import ReduxAsyncThunkLesson from "./lessons/17-redux-async-thunk";
 import ReduxAsyncThunkLessonCode from "./lessons/17-redux-async-thunk?raw";
 import ReduxAsyncThunkDistributedLesson from "./lessons/18-redux-async-thunk-distributed";
 import ReduxAsyncThunkDistributedLessonCode from "./lessons/18-redux-async-thunk-distributed?raw";
+import PropsLesson from "./lessons/19-props";
+import PropsLessonCode from "./lessons/19-props?raw";
+import MemoLesson from "./lessons/20-memo";
+import MemoLessonCode from "./lessons/20-memo?raw";
 
 export interface Handle {
   title: string;
@@ -329,6 +333,39 @@ export const lessons: RouteObject[] = [
       title: "Redux Async Thunk distributed",
       description:
         "By moving dispatch and selectors down in the component tree, rerendering is limited to components that use the state.",
+    } satisfies Handle,
+  },
+  {
+    path: "/19-props",
+    element: (
+      <>
+        <PropsLesson />
+        <Code>{PropsLessonCode}</Code>
+      </>
+    ),
+    handle: {
+      group: "Props",
+      title: "Props and state",
+      description:
+        "The child components will rerender even if their props do not change, because the parent state changes.",
+    } satisfies Handle,
+  },
+  {
+    path: "/20-memo",
+    element: (
+      <>
+        <MemoLesson />
+        <Code>{MemoLessonCode}</Code>
+      </>
+    ),
+    handle: {
+      group: "Props",
+      title: "React.memo",
+      description: (
+        <>
+          Using <code>React.memo</code> prevents rerendering when props do not change.
+        </>
+      ),
     } satisfies Handle,
   },
 ];
