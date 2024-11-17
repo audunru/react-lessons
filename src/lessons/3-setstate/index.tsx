@@ -6,15 +6,15 @@ import RenderCount from "../../components/render-count";
 const UseState: React.FC = () => {
   const [count, setCount] = useState<number>(0);
 
+  const handleClick = () => {
+    setCount((c) => c + 1);
+  };
+
   return (
     <>
       <RenderCount />
 
-      <Button
-        onClick={() => {
-          setCount((c) => c + 1);
-        }}
-      >{`Click count: ${count.toString(10)}`}</Button>
+      <Button onClick={handleClick}>{`Click count: ${count.toString(10)}`}</Button>
     </>
   );
 };

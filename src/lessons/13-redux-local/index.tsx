@@ -14,9 +14,7 @@ const ReduxDistributed: React.FC = () => {
   return (
     <>
       <RenderCount />
-
       <ValueDisplay />
-
       <ValueSetter />
     </>
   );

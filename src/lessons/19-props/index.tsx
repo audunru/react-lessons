@@ -14,6 +14,7 @@ export const Value: React.FC<ValueProps> = (props) => {
   return (
     <>
       <Paragraph>Value is {props.value}</Paragraph>
+
       <Counter />
     </>
   );
@@ -26,6 +27,7 @@ const Props: React.FC = () => {
   return (
     <>
       <RenderCount />
+
       <div className="flex gap-4">
         <Box>
           <Input
@@ -37,6 +39,7 @@ const Props: React.FC = () => {
           />
           <Value value={valueA} />
         </Box>
+
         <Box>
           <Input
             label="Input B"

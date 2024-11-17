@@ -32,6 +32,7 @@ const Memo: React.FC = () => {
           />
           <MemoizedValue value={valueA} />
         </Box>
+
         <Box>
           <Input
             label="Input B"

@@ -17,7 +17,9 @@ const Redux: React.FC = () => {
   return (
     <>
       <RenderCount />
+
       <Paragraph>Last updated: {value}</Paragraph>
+
       <ValueSetter />
     </>
   );

@@ -37,6 +37,7 @@ const Fetch: React.FC = () => {
   return (
     <>
       <RenderCount />
+
       {value ? <Code title="API response">{JSON.stringify(value, null, 2)}</Code> : <Loader />}
     </>
   );

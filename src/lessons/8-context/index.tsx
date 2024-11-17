@@ -6,15 +6,11 @@ import { MyProvider, useMyContext } from "./context";
 export const UpdateContext: React.FC = () => {
   const { setValue } = useMyContext();
 
-  return (
-    <Button
-      onClick={() => {
-        setValue(new Date().toISOString());
-      }}
-    >
-      Update
-    </Button>
-  );
+  const handleClick = () => {
+    setValue(new Date().toISOString());
+  };
+
+  return <Button onClick={handleClick}>Update</Button>;
 };
 
 const ReactContext: React.FC = () => {
@@ -23,7 +19,9 @@ const ReactContext: React.FC = () => {
   return (
     <>
       <RenderCount />
+
       <Paragraph>Last updated: {value}</Paragraph>
+
       <UpdateContext />
     </>
   );

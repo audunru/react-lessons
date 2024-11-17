@@ -11,14 +11,15 @@ const Child = () => {
 const Parent: React.FC<PropsWithChildren> = (props: PropsWithChildren) => {
   const [count, setCount] = useState<number>(0);
 
+  const handleClick = () => {
+    setCount((c) => c + 1);
+  };
+
   return (
     <>
       {props.children}
-      <Button
-        onClick={() => {
-          setCount((c) => c + 1);
-        }}
-      >{`Click count: ${count.toString(10)}`}</Button>
+
+      <Button onClick={handleClick}>{`Click count: ${count.toString(10)}`}</Button>
     </>
   );
 };

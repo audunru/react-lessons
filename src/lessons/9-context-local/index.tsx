@@ -13,9 +13,7 @@ const ReactContextLocal: React.FC = () => {
   return (
     <>
       <RenderCount />
-
       <ShowContext />
-
       <UpdateContext />
     </>
   );
