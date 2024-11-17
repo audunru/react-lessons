@@ -32,20 +32,20 @@ import ReduxContainer from "./lessons/12-redux";
 import ReduxContainerCode from "./lessons/12-redux?raw";
 import ReduxLocalContainer from "./lessons/13-redux-local";
 import ReduxLocalContainerCode from "./lessons/13-redux-local?raw";
-import CssLesson from "./lessons/14-css";
-import CssLessonCode from "./lessons/14-css?raw";
-import CssOnlyLesson from "./lessons/15-css-only";
-import CssOnlyLessonCode from "./lessons/15-css-only?raw";
+import Css from "./lessons/14-css";
+import CssCode from "./lessons/14-css?raw";
+import CssOnly from "./lessons/15-css-only";
+import CssOnlyCode from "./lessons/15-css-only?raw";
 import ReactQuery from "./lessons/16-react-query";
 import ReactQueryCode from "./lessons/16-react-query?raw";
-import ReduxAsyncThunkLesson from "./lessons/17-redux-async-thunk";
-import ReduxAsyncThunkLessonCode from "./lessons/17-redux-async-thunk?raw";
-import ReduxAsyncThunkDistributedLesson from "./lessons/18-redux-async-thunk-distributed";
-import ReduxAsyncThunkDistributedLessonCode from "./lessons/18-redux-async-thunk-distributed?raw";
-import PropsLesson from "./lessons/19-props";
-import PropsLessonCode from "./lessons/19-props?raw";
-import MemoLesson from "./lessons/20-memo";
-import MemoLessonCode from "./lessons/20-memo?raw";
+import ReduxAsyncThunk from "./lessons/17-redux-async-thunk";
+import ReduxAsyncThunkCode from "./lessons/17-redux-async-thunk?raw";
+import ReduxAsyncThunkDistributed from "./lessons/18-redux-async-thunk-distributed";
+import ReduxAsyncThunkDistributedCode from "./lessons/18-redux-async-thunk-distributed?raw";
+import Props from "./lessons/19-props";
+import PropsCode from "./lessons/19-props?raw";
+import Memo from "./lessons/20-memo";
+import MemoCode from "./lessons/20-memo?raw";
 import About from "./pages/about";
 
 export interface Handle {
@@ -257,8 +257,8 @@ export const lessons: RouteObject[] = [
     path: "/14-css",
     element: (
       <>
-        <CssLesson />
-        <Code>{CssLessonCode}</Code>
+        <Css />
+        <Code>{CssCode}</Code>
       </>
     ),
     handle: {
@@ -276,8 +276,8 @@ export const lessons: RouteObject[] = [
     path: "/15-css-only",
     element: (
       <>
-        <CssOnlyLesson />
-        <Code>{CssOnlyLessonCode}</Code>
+        <CssOnly />
+        <Code>{CssOnlyCode}</Code>
       </>
     ),
     handle: {
@@ -305,8 +305,8 @@ export const lessons: RouteObject[] = [
     path: "/17-redux-async-thunk",
     element: (
       <>
-        <ReduxAsyncThunkLesson />
-        <Code>{ReduxAsyncThunkLessonCode}</Code>
+        <ReduxAsyncThunk />
+        <Code>{ReduxAsyncThunkCode}</Code>
       </>
     ),
     handle: {
@@ -324,8 +324,8 @@ export const lessons: RouteObject[] = [
     path: "/18-redux-async-thunk-distributed",
     element: (
       <>
-        <ReduxAsyncThunkDistributedLesson />
-        <Code>{ReduxAsyncThunkDistributedLessonCode}</Code>
+        <ReduxAsyncThunkDistributed />
+        <Code>{ReduxAsyncThunkDistributedCode}</Code>
       </>
     ),
     handle: {
@@ -339,8 +339,8 @@ export const lessons: RouteObject[] = [
     path: "/19-props",
     element: (
       <>
-        <PropsLesson />
-        <Code>{PropsLessonCode}</Code>
+        <Props />
+        <Code>{PropsCode}</Code>
       </>
     ),
     handle: {
@@ -354,8 +354,8 @@ export const lessons: RouteObject[] = [
     path: "/20-memo",
     element: (
       <>
-        <MemoLesson />
-        <Code>{MemoLessonCode}</Code>
+        <Memo />
+        <Code>{MemoCode}</Code>
       </>
     ),
     handle: {

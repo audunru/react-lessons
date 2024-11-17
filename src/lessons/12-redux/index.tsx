@@ -23,7 +23,7 @@ const Redux: React.FC = () => {
   );
 };
 
-const ReduxLesson: React.FC = () => {
+const ReduxWrapper: React.FC = () => {
   return (
     <Provider store={store}>
       <Redux />
@@ -31,4 +31,4 @@ const ReduxLesson: React.FC = () => {
   );
 };
 
-export default ReduxLesson;
+export default ReduxWrapper;

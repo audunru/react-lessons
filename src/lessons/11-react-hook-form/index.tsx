@@ -4,7 +4,7 @@ import Input from "../../components/input";
 import Paragraph from "../../components/paragraph";
 import RenderCount from "../../components/render-count";
 
-const ReactHookFormLesson: React.FC = () => {
+const ReactHookForm: React.FC = () => {
   const { register } = useForm<{
     value: string;
   }>();
@@ -18,4 +18,4 @@ const ReactHookFormLesson: React.FC = () => {
   );
 };
 
-export default ReactHookFormLesson;
+export default ReactHookForm;

@@ -29,7 +29,7 @@ const ReactContext: React.FC = () => {
   );
 };
 
-const ReactContextLesson: React.FC = () => {
+const ReactContextWrapper: React.FC = () => {
   return (
     <MyProvider>
       <ReactContext />
@@ -37,4 +37,4 @@ const ReactContextLesson: React.FC = () => {
   );
 };
 
-export default ReactContextLesson;
+export default ReactContextWrapper;

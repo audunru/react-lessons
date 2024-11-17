@@ -8,7 +8,7 @@ const Child = () => {
   return <RenderCount />;
 };
 
-const UseStateWithChildLesson: React.FC = () => {
+const UseStateWithChild: React.FC = () => {
   const [count, setCount] = useState<number>(0);
 
   return (
@@ -23,4 +23,4 @@ const UseStateWithChildLesson: React.FC = () => {
   );
 };
 
-export default UseStateWithChildLesson;
+export default UseStateWithChild;

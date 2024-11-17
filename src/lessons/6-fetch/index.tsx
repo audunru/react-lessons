@@ -22,7 +22,7 @@ export const getTodo = async (): Promise<Todo> => {
   return data;
 };
 
-const FetchLesson: React.FC = () => {
+const Fetch: React.FC = () => {
   const [value, setValue] = useState<Todo>();
 
   useEffect(() => {
@@ -42,4 +42,4 @@ const FetchLesson: React.FC = () => {
   );
 };
 
-export default FetchLesson;
+export default Fetch;

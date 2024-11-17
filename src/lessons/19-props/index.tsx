@@ -19,7 +19,7 @@ export const Value: React.FC<ValueProps> = (props) => {
   );
 };
 
-const PropsLesson: React.FC = () => {
+const Props: React.FC = () => {
   const [valueA, setValueA] = useState<string>("");
   const [valueB, setValueB] = useState<string>("");
 
@@ -52,4 +52,4 @@ const PropsLesson: React.FC = () => {
   );
 };
 
-export default PropsLesson;
+export default Props;

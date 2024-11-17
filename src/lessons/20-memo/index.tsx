@@ -8,7 +8,7 @@ import { Value } from "../19-props";
 
 const MemoizedValue = React.memo(Value);
 
-const MemoLesson: React.FC = () => {
+const Memo: React.FC = () => {
   const [valueA, setValueA] = useState<string>("");
   const [valueB, setValueB] = useState<string>("");
 
@@ -47,4 +47,4 @@ const MemoLesson: React.FC = () => {
   );
 };
 
-export default MemoLesson;
+export default Memo;

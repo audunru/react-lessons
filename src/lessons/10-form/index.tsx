@@ -3,7 +3,7 @@ import { useState } from "react";
 import Input from "../../components/input";
 import RenderCount from "../../components/render-count";
 
-const FormLesson: React.FC = () => {
+const Form: React.FC = () => {
   const [value, setValue] = useState<string>("");
 
   return (
@@ -20,4 +20,4 @@ const FormLesson: React.FC = () => {
   );
 };
 
-export default FormLesson;
+export default Form;

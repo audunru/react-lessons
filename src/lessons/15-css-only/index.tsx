@@ -3,7 +3,7 @@ import { NavLink } from "react-router-dom";
 
 import RenderCount from "../../components/render-count";
 
-const CssOnlyLesson: React.FC = () => {
+const CssOnly: React.FC = () => {
   return (
     <>
       <RenderCount />
@@ -17,4 +17,4 @@ const CssOnlyLesson: React.FC = () => {
   );
 };
 
-export default CssOnlyLesson;
+export default CssOnly;

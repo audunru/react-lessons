@@ -20,7 +20,7 @@ const ReduxDistributed: React.FC = () => {
   );
 };
 
-const ReduxDistributedLesson: React.FC = () => {
+const ReduxDistributedWrapper: React.FC = () => {
   return (
     <Provider store={store}>
       <ReduxDistributed />
@@ -28,4 +28,4 @@ const ReduxDistributedLesson: React.FC = () => {
   );
 };
 
-export default ReduxDistributedLesson;
+export default ReduxDistributedWrapper;

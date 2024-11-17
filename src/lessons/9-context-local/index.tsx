@@ -19,7 +19,7 @@ const ReactContextLocal: React.FC = () => {
   );
 };
 
-const ReactContextDistributedLesson: React.FC = () => {
+const ReactContextDistributed: React.FC = () => {
   return (
     <MyProvider>
       <ReactContextLocal />
@@ -27,4 +27,4 @@ const ReactContextDistributedLesson: React.FC = () => {
   );
 };
 
-export default ReactContextDistributedLesson;
+export default ReactContextDistributed;

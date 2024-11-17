@@ -10,7 +10,7 @@ export const loader: LoaderFunction = async () => {
   return getTodo();
 };
 
-const ReactRouterLoaderLesson: React.FC = () => {
+const ReactRouterLoader: React.FC = () => {
   const value = useLoaderData() as Todo;
   const navigation = useNavigation();
 
@@ -36,4 +36,4 @@ const ReactRouterLoaderLesson: React.FC = () => {
   );
 };
 
-export default ReactRouterLoaderLesson;
+export default ReactRouterLoader;

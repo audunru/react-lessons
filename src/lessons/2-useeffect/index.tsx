@@ -3,7 +3,7 @@ import { useEffect, useState } from "react";
 import Paragraph from "../../components/paragraph";
 import RenderCount from "../../components/render-count";
 
-const UseEffectLesson: React.FC = () => {
+const UseEffect: React.FC = () => {
   const [count, setCount] = useState<number>(1);
 
   useEffect(() => {
@@ -22,4 +22,4 @@ const UseEffectLesson: React.FC = () => {
   );
 };
 
-export default UseEffectLesson;
+export default UseEffect;

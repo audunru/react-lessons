@@ -26,7 +26,7 @@ const ToggleButton: React.FC<PropsWithChildren> = (props) => {
   );
 };
 
-const CssLesson: React.FC = () => {
+const Css: React.FC = () => {
   return (
     <>
       <RenderCount />
@@ -37,4 +37,4 @@ const CssLesson: React.FC = () => {
   );
 };
 
-export default CssLesson;
+export default Css;

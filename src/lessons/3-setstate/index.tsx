@@ -3,7 +3,7 @@ import { useState } from "react";
 import Button from "../../components/button";
 import RenderCount from "../../components/render-count";
 
-const UseStateLesson: React.FC = () => {
+const UseState: React.FC = () => {
   const [count, setCount] = useState<number>(0);
 
   return (
@@ -19,4 +19,4 @@ const UseStateLesson: React.FC = () => {
   );
 };
 
-export default UseStateLesson;
+export default UseState;

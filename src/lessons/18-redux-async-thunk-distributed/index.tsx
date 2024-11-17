@@ -66,7 +66,7 @@ const ReduxAsyncThunkDistributed: React.FC = () => {
   );
 };
 
-const ReduxAsyncThunkDistributedLesson: React.FC = () => {
+const ReduxAsyncThunkDistributedWrapper: React.FC = () => {
   return (
     <Provider store={store}>
       <ReduxAsyncThunkDistributed />
@@ -74,4 +74,4 @@ const ReduxAsyncThunkDistributedLesson: React.FC = () => {
   );
 };
 
-export default ReduxAsyncThunkDistributedLesson;
+export default ReduxAsyncThunkDistributedWrapper;
