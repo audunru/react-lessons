@@ -41,6 +41,8 @@ import ReactQuery from "./lessons/16-react-query";
 import ReactQueryCode from "./lessons/16-react-query?raw";
 import ReduxAsyncThunkLesson from "./lessons/17-redux-async-thunk";
 import ReduxAsyncThunkLessonCode from "./lessons/17-redux-async-thunk?raw";
+import ReduxAsyncThunkDistributedLesson from "./lessons/18-redux-async-thunk-distributed";
+import ReduxAsyncThunkDistributedLessonCode from "./lessons/18-redux-async-thunk-distributed?raw";
 
 export interface Handle {
   title: string;
@@ -67,7 +69,8 @@ export const lessons: RouteObject[] = [
     handle: {
       title: "Functional components",
       description:
-        "Don't let the JSX syntax trick you! Functional components are just functions that receive arguments, run their code and return a value.",
+        "Functional components are just functions that receive arguments, run their code and return a value.",
+      group: "Props",
     } satisfies Handle,
   },
   {
@@ -291,7 +294,7 @@ export const lessons: RouteObject[] = [
     handle: {
       group: "Fetch",
       title: "React Query",
-      description: "With React Query, you can cache API responses, handle updates, loading and errors easily.",
+      description: "With React Query, you can cache API responses, handle updates, loading status and errors easily.",
     } satisfies Handle,
   },
   {
@@ -305,7 +308,27 @@ export const lessons: RouteObject[] = [
     handle: {
       group: "Fetch",
       title: "Redux Async Thunk",
-      description: "",
+      description: (
+        <>
+          An <em>async thunk action</em> can update state several times, which can lead to multiple renders depending on
+          where you use the state.
+        </>
+      ),
+    } satisfies Handle,
+  },
+  {
+    path: "/18-redux-async-thunk-distributed",
+    element: (
+      <>
+        <ReduxAsyncThunkDistributedLesson />
+        <Code>{ReduxAsyncThunkDistributedLessonCode}</Code>
+      </>
+    ),
+    handle: {
+      group: "Fetch",
+      title: "Redux Async Thunk distributed",
+      description:
+        "By moving dispatch and selectors down in the component tree, rerendering is limited to components that use the state.",
     } satisfies Handle,
   },
 ];

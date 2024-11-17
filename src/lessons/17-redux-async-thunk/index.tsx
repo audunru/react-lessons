@@ -37,9 +37,9 @@ const ReduxAsyncThunk: React.FC = () => {
       <RenderCount />
 
       <Paragraph>
-        During the first render, the <code>fetchTodo</code> action is dispatched. The status is set to{" "}
-        <strong>loading</strong>, which triggers a new render. A third render is performed when the data has been
-        received.
+        During the first render, the <code>fetchTodo</code> action is dispatched. It is async, and several things will
+        happen before the promise is resolved. First, the status is set to <strong>loading</strong>, which triggers a
+        second render. A third render is performed when the data has been received.
       </Paragraph>
 
       {isLoading && <Loader />}
