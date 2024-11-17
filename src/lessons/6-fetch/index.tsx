@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 
-import { Code } from "../../components/code";
+import Code from "../../components/code";
 import Loader from "../../components/loader";
 import Explanation from "../../components/render-counter";
 import { SubTitle } from "../../components/sub-title";

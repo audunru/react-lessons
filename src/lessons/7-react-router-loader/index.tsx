@@ -1,6 +1,6 @@
 import { LoaderFunction, useLoaderData } from "react-router-dom";
 
-import { Code } from "../../components/code";
+import Code from "../../components/code";
 import Explanation from "../../components/render-counter";
 import { SubTitle } from "../../components/sub-title";
 import { Todo } from "../6-fetch";

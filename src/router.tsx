@@ -2,7 +2,7 @@ import "./index.css";
 
 import { createHashRouter, Outlet, RouteObject } from "react-router-dom";
 
-import { Code } from "./components/code";
+import Code from "./components/code";
 import { Container } from "./components/container";
 import ErrorElement from "./components/error";
 import { Home } from "./lessons/0-home";
