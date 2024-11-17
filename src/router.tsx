@@ -28,6 +28,9 @@ import ReduxLocalContainer from "./lessons/13-redux-local";
 import ReduxLocalContainerCode from "./lessons/13-redux-local?raw";
 import { Home } from "./lessons/0-home";
 import { Code } from "./components/code";
+import ErrorElement from "./components/error";
+import CssLesson from "./lessons/14-css";
+import CssLessonCode from "./lessons/14-css?raw";
 
 import "./index.css";
 
@@ -218,6 +221,20 @@ export const lessons: RouteObject[] = [
         "Updating the Redux store triggers a rerender of components that use the store. Create separate components to limit the amount of rerendering.",
     },
   },
+  {
+    path: "/13-css",
+    element: (
+      <>
+        <CssLesson />
+        <Code>{CssLessonCode}</Code>
+      </>
+    ),
+    handle: {
+      title: "CSS Toggle",
+      description:
+        "State is used to control the aria-expanded attribute on the button for accessibility reasons, but the visibility is controlled by CSS.",
+    },
+  },
 ];
 
 const routes: RouteObject[] = [
@@ -227,6 +244,7 @@ const routes: RouteObject[] = [
         <Outlet />
       </Container>
     ),
+    errorElement: <ErrorElement />,
     children: lessons,
   },
 ];
