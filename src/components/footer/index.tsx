@@ -1,6 +1,7 @@
 import React from "react";
-import { Paragraph } from "../paragraph";
+
 import Link from "../link";
+import { Paragraph } from "../paragraph";
 
 const Footer: React.FC = () => {
   return (

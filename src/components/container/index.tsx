@@ -1,8 +1,8 @@
 import { PropsWithChildren } from "react";
 
+import Footer from "../footer";
 import { Menu } from "../menu";
 import { MenuItems } from "../menu/menu-items";
-import Footer from "../footer";
 
 export const Container: React.FC<PropsWithChildren> = (props: PropsWithChildren) => {
   return (

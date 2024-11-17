@@ -1,6 +1,5 @@
-import React, { useRef } from "react";
-
 import clsx from "clsx";
+import React, { useRef } from "react";
 
 export const Counter: React.FC = () => {
   const count = useRef<number>(0);
