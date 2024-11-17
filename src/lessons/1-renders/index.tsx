@@ -1,9 +1,9 @@
-import Explanation from "../../components/render-counter";
+import RenderCount from "../../components/render-count";
 
 const FunctionalComponentLesson: React.FC = () => {
   // Every line of code here is executed every time the component renders
 
-  return <Explanation />;
+  return <RenderCount />;
 };
 
 export default FunctionalComponentLesson;

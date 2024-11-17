@@ -2,8 +2,8 @@ import { useEffect, useState } from "react";
 
 import Code from "../../components/code";
 import Loader from "../../components/loader";
-import Explanation from "../../components/render-counter";
-import { SubTitle } from "../../components/sub-title";
+import RenderCount from "../../components/render-count";
+import SubTitle from "../../components/sub-title";
 
 export interface Todo {
   userId: number;
@@ -28,7 +28,7 @@ const FetchLesson: React.FC = () => {
 
   return (
     <>
-      <Explanation />
+      <RenderCount />
       {value ? (
         <>
           <SubTitle>API response</SubTitle>

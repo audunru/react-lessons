@@ -1,6 +1,6 @@
-import { Paragraph } from "../../components/paragraph";
-import { SubTitle } from "../../components/sub-title";
-import { Title } from "../../components/title";
+import Paragraph from "../../components/paragraph";
+import SubTitle from "../../components/sub-title";
+import Title from "../../components/title";
 
 export const Home: React.FC = () => {
   return (

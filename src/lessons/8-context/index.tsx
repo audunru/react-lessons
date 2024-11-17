@@ -1,6 +1,6 @@
-import { Button } from "../../components/button";
-import { Paragraph } from "../../components/paragraph";
-import Explanation from "../../components/render-counter";
+import Button from "../../components/button";
+import Paragraph from "../../components/paragraph";
+import RenderCount from "../../components/render-count";
 import { MyProvider, useMyContext } from "./context";
 
 export const UpdateContext: React.FC = () => {
@@ -22,7 +22,7 @@ const ReactContext: React.FC = () => {
 
   return (
     <>
-      <Explanation />
+      <RenderCount />
       <Paragraph>Last updated: {value}</Paragraph>
       <UpdateContext />
     </>

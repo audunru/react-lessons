@@ -1,9 +1,10 @@
 import "./index.css";
 
+import React from "react";
 import { createHashRouter, Outlet, RouteObject } from "react-router-dom";
 
 import Code from "./components/code";
-import { Container } from "./components/container";
+import Container from "./components/container";
 import ErrorElement from "./components/error";
 import { Home } from "./lessons/0-home";
 import RendersOnce from "./lessons/1-renders";
@@ -39,7 +40,8 @@ import CssOnlyLessonCode from "./lessons/15-css-only?raw";
 
 export interface Handle {
   title: string;
-  description?: string;
+  description?: React.ReactNode;
+  group?: string;
 }
 
 export const lessons: RouteObject[] = [
@@ -73,6 +75,7 @@ export const lessons: RouteObject[] = [
       </>
     ),
     handle: {
+      group: "State",
       title: "useEffect",
       description:
         "Updating state in useEffect causes an extra render. If you have a value (i.e. from a prop), and you need to transform it into something else, you can just do it in the body of the function.",
@@ -87,6 +90,7 @@ export const lessons: RouteObject[] = [
       </>
     ),
     handle: {
+      group: "State",
       title: "useState",
       description: "Updating state triggers an extra render. The entire function is run again when state is updated.",
     } satisfies Handle,
@@ -100,6 +104,7 @@ export const lessons: RouteObject[] = [
       </>
     ),
     handle: {
+      group: "State",
       title: "useState with child",
       description:
         "The child component rerenders when parent state changes, even though nothing has changed in the child.",
@@ -114,6 +119,7 @@ export const lessons: RouteObject[] = [
       </>
     ),
     handle: {
+      group: "State",
       title: "useState with children",
       description: "Using the children prop prevents rerendering when the parent state changes.",
     } satisfies Handle,
@@ -127,6 +133,7 @@ export const lessons: RouteObject[] = [
       </>
     ),
     handle: {
+      group: "Fetch",
       title: "Fetch from API",
       description:
         "Fetching data in a useEffect causes an extra render. During the first render, the data is undefined, and updating state will trigger a new render.",
@@ -142,6 +149,7 @@ export const lessons: RouteObject[] = [
     ),
     loader: reactRouterLoader,
     handle: {
+      group: "Fetch",
       title: "Fetch with React Router",
       description: "In React Router, you can use loader functions to load data before your component renders.",
     } satisfies Handle,
@@ -155,6 +163,7 @@ export const lessons: RouteObject[] = [
       </>
     ),
     handle: {
+      group: "Flux",
       title: "React Context",
       description:
         "Updating the React context triggers a rerender of components that use the context. Child components will rerender even though they don't use the context.",
@@ -169,6 +178,7 @@ export const lessons: RouteObject[] = [
       </>
     ),
     handle: {
+      group: "Flux",
       title: "React Context with distributed state",
       description:
         "Updating the context triggers a rerender of components that use the context. Create separate components to limit the amount of rerendering.",
@@ -183,6 +193,7 @@ export const lessons: RouteObject[] = [
       </>
     ),
     handle: {
+      group: "State",
       title: "Form and useState",
       description: "Every time the input changes, the component state is updated, which triggers a rerender.",
     } satisfies Handle,
@@ -196,6 +207,7 @@ export const lessons: RouteObject[] = [
       </>
     ),
     handle: {
+      group: "State",
       title: "Form with React Hook Form",
       description:
         "The package React Hook Form tries to avoid rerendering. Typing in the input field does not trigger a rerender.",
@@ -210,6 +222,7 @@ export const lessons: RouteObject[] = [
       </>
     ),
     handle: {
+      group: "Flux",
       title: "Redux",
       description:
         "Updating the Redux store triggers a rerender of components that use the store. Child components will rerender even though they don't use the store.",
@@ -224,6 +237,7 @@ export const lessons: RouteObject[] = [
       </>
     ),
     handle: {
+      group: "Flux",
       title: "Redux with distributed state",
       description:
         "Updating the Redux store triggers a rerender of components that use the store. Create separate components to limit the amount of rerendering.",
@@ -238,9 +252,14 @@ export const lessons: RouteObject[] = [
       </>
     ),
     handle: {
+      group: "CSS",
       title: "CSS Toggle",
-      description:
-        "State is used to control the aria-expanded attribute on the button for accessibility reasons, but the visibility is controlled by CSS.",
+      description: (
+        <>
+          State is used to control the <strong className="font-mono">aria-expanded</strong> attribute on the button for
+          accessibility reasons, but the visibility is controlled by CSS.
+        </>
+      ),
     } satisfies Handle,
   },
   {
@@ -252,6 +271,7 @@ export const lessons: RouteObject[] = [
       </>
     ),
     handle: {
+      group: "CSS",
       title: "CSS Only",
       description:
         "Even if a component should respond to user interaction, it's not always necessary to use state to achieve that. Tab through the elements on this page, and a link to the home page will appear.",

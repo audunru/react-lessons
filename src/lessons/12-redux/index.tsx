@@ -1,8 +1,8 @@
 import { Provider, useSelector } from "react-redux";
 
-import { Button } from "../../components/button";
-import { Paragraph } from "../../components/paragraph";
-import Explanation from "../../components/render-counter";
+import Button from "../../components/button";
+import Paragraph from "../../components/paragraph";
+import RenderCount from "../../components/render-count";
 import { receivedValue, selectValue, store, useAppDispatch } from "./store";
 
 export const ValueSetter: React.FC = () => {
@@ -16,7 +16,7 @@ const Redux: React.FC = () => {
 
   return (
     <>
-      <Explanation />
+      <RenderCount />
       <Paragraph>Last updated: {value}</Paragraph>
       <ValueSetter />
     </>

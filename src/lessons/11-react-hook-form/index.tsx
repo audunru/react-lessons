@@ -1,7 +1,7 @@
 import { useForm } from "react-hook-form";
 
 import Input from "../../components/input";
-import Explanation from "../../components/render-counter";
+import RenderCount from "../../components/render-count";
 
 const ReactHookFormLesson: React.FC = () => {
   const { register } = useForm<{
@@ -10,7 +10,7 @@ const ReactHookFormLesson: React.FC = () => {
 
   return (
     <>
-      <Explanation />
+      <RenderCount />
       <Input label="Input" {...register("value")} />
     </>
   );

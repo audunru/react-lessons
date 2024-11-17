@@ -1,8 +1,8 @@
 import { LoaderFunction, useLoaderData } from "react-router-dom";
 
 import Code from "../../components/code";
-import Explanation from "../../components/render-counter";
-import { SubTitle } from "../../components/sub-title";
+import RenderCount from "../../components/render-count";
+import SubTitle from "../../components/sub-title";
 import { Todo } from "../6-fetch";
 
 export const loader: LoaderFunction = async () => {
@@ -17,7 +17,7 @@ const ReactRouterLoaderLesson: React.FC = () => {
 
   return (
     <>
-      <Explanation />
+      <RenderCount />
       <SubTitle>API response</SubTitle>
       <Code>{JSON.stringify(value, null, 2)}</Code>
     </>

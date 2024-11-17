@@ -1,5 +1,5 @@
-import { Paragraph } from "../../components/paragraph";
-import Explanation from "../../components/render-counter";
+import Paragraph from "../../components/paragraph";
+import RenderCount from "../../components/render-count";
 import { UpdateContext } from "../8-context";
 import { MyProvider, useMyContext } from "../8-context/context";
 
@@ -12,7 +12,7 @@ export const ShowContext: React.FC = () => {
 const ReactContextLocal: React.FC = () => {
   return (
     <>
-      <Explanation />
+      <RenderCount />
       <ShowContext />
       <UpdateContext />
     </>

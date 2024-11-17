@@ -1,11 +1,11 @@
 import { PropsWithChildren, useState } from "react";
 
-import { Button } from "../../components/button";
-import Explanation from "../../components/render-counter";
+import Button from "../../components/button";
+import RenderCount from "../../components/render-count";
 
 const Child = () => {
   // This will *not* render again when parent state changes
-  return <Explanation />;
+  return <RenderCount />;
 };
 
 const UseStateWithChildren: React.FC<PropsWithChildren> = (props: PropsWithChildren) => {

@@ -1,7 +1,7 @@
 import { Provider, useSelector } from "react-redux";
 
-import { Paragraph } from "../../components/paragraph";
-import Explanation from "../../components/render-counter";
+import Paragraph from "../../components/paragraph";
+import RenderCount from "../../components/render-count";
 import { ValueSetter } from "../12-redux";
 import { selectValue, store } from "../12-redux/store";
 
@@ -13,7 +13,7 @@ const ValueDisplay: React.FC = () => {
 const ReduxDistributed: React.FC = () => {
   return (
     <>
-      <Explanation />
+      <RenderCount />
       <ValueDisplay />
       <ValueSetter />
     </>

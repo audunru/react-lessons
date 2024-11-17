@@ -1,14 +1,14 @@
 import { useState } from "react";
 
 import Input from "../../components/input";
-import Explanation from "../../components/render-counter";
+import RenderCount from "../../components/render-count";
 
 const FormLesson: React.FC = () => {
   const [value, setValue] = useState<string>("");
 
   return (
     <>
-      <Explanation />
+      <RenderCount />
       <Input
         label="Input"
         onChange={(event) => {

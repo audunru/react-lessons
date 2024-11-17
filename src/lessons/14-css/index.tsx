@@ -1,8 +1,8 @@
 import React, { PropsWithChildren, useState } from "react";
 
-import { Button } from "../../components/button";
-import Explanation from "../../components/render-counter";
-import { Counter } from "../../components/render-counter/counter";
+import Button from "../../components/button";
+import RenderCount from "../../components/render-count";
+import Counter from "../../components/render-count/counter";
 
 const ToggleButton: React.FC<PropsWithChildren> = (props) => {
   const [isActive, setIsActive] = useState<boolean>(false);
@@ -29,7 +29,7 @@ const ToggleButton: React.FC<PropsWithChildren> = (props) => {
 const CssLesson: React.FC = () => {
   return (
     <>
-      <Explanation />
+      <RenderCount />
       <ToggleButton>
         <Counter />
       </ToggleButton>

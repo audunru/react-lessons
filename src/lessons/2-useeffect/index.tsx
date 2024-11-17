@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 
-import { Paragraph } from "../../components/paragraph";
-import Explanation from "../../components/render-counter";
+import Paragraph from "../../components/paragraph";
+import RenderCount from "../../components/render-count";
 
 const UseEffectLesson: React.FC = () => {
   const [count, setCount] = useState<number>(1);
@@ -15,7 +15,7 @@ const UseEffectLesson: React.FC = () => {
 
   return (
     <>
-      <Explanation />
+      <RenderCount />
 
       <Paragraph>{`Value is now ${count.toString(10)}`}</Paragraph>
     </>

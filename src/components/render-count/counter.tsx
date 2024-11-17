@@ -1,7 +1,7 @@
 import clsx from "clsx";
 import React, { useRef } from "react";
 
-export const Counter: React.FC = () => {
+const Counter: React.FC = () => {
   const count = useRef<number>(0);
 
   count.current++;
@@ -37,7 +37,7 @@ export const Counter: React.FC = () => {
         className={clsx(
           "inline-block w-8 h-8 text-center text-gray-800 rounded-full ml-3",
           bgColorClass,
-          textColorClass
+          textColorClass,
         )}
       >
         {count.current}
@@ -45,3 +45,5 @@ export const Counter: React.FC = () => {
     </p>
   );
 };
+
+export default Counter;
