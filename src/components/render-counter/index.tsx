@@ -13,6 +13,7 @@ const Explanation: React.FC = () => {
   return (
     <>
       <Counter />
+      <hr className="border-b border-gray-300 dark:border-gray-600 w-full max-w-xs" />
       <Title>{handle.title}</Title>
       <Ingress>{handle.description}</Ingress>
     </>
