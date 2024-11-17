@@ -1,4 +1,4 @@
-import { QueryClient, QueryClientProvider, useQuery } from "@tanstack/react-query";
+import { useQuery } from "@tanstack/react-query";
 
 import Code from "../../components/code";
 import Loader from "../../components/loader";
@@ -6,7 +6,7 @@ import Paragraph from "../../components/paragraph";
 import RenderCount from "../../components/render-count";
 import { getTodo, Todo } from "../6-fetch";
 
-const ReactQuery: React.FC = () => {
+const ReactQueryLesson: React.FC = () => {
   const { data: value, isLoading } = useQuery<Todo>({
     queryKey: ["todo", 1],
     queryFn: getTodo,
@@ -33,16 +33,6 @@ const ReactQuery: React.FC = () => {
 
       {value && <Code title="API response">{JSON.stringify(value, null, 2)}</Code>}
     </>
-  );
-};
-
-const queryClient = new QueryClient();
-
-const ReactQueryLesson: React.FC = () => {
-  return (
-    <QueryClientProvider client={queryClient}>
-      <ReactQuery />
-    </QueryClientProvider>
   );
 };
 
