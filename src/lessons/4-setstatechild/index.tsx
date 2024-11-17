@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { Message } from "../../components/message";
+import { Button } from "../../components/button";
 
 const Child = () => {
   return (
@@ -14,8 +15,8 @@ export const SetStateChild: React.FC = () => {
 
   return (
     <>
-      <button onClick={() => setCount(count + 1)}>{`Click count: ${count}`}</button>
       <Child />
+      <Button onClick={() => setCount(count + 1)}>{`Click count: ${count}`}</Button>
     </>
   );
 };

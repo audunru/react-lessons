@@ -5,5 +5,5 @@ export const RenderCount: React.FC = () => {
 
   count.current++;
 
-  return <p>Render count: {count.current}</p>;
+  return <p className="text-xl font-bold dark:text-gray-100">Render count: {count.current}</p>;
 };

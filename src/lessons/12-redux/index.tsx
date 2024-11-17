@@ -1,11 +1,13 @@
 import { Provider, useSelector } from "react-redux";
 import { Message } from "../../components/message";
 import { receivedValue, selectValue, store, useAppDispatch } from "./store";
+import { Paragraph } from "../../components/paragraph";
+import { Button } from "../../components/button";
 
 export const ValueSetter: React.FC = () => {
   const dispatch = useAppDispatch();
 
-  return <button onClick={() => dispatch(receivedValue(new Date().toISOString()))}>Update</button>;
+  return <Button onClick={() => dispatch(receivedValue(new Date().toISOString()))}>Update</Button>;
 };
 
 const Redux: React.FC = () => {
@@ -13,11 +15,11 @@ const Redux: React.FC = () => {
 
   return (
     <>
-      <p>Current value: {value}</p>
-      <ValueSetter />
       <Message title="Updating the redux store triggers a render of components that use the redux store">
         Child components will rerender even though they don't change.
       </Message>
+      <Paragraph>Current value: {value}</Paragraph>
+      <ValueSetter />
     </>
   );
 };

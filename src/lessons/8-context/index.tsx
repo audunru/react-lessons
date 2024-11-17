@@ -1,10 +1,12 @@
+import { Button } from "../../components/button";
 import { Message } from "../../components/message";
+import { Paragraph } from "../../components/paragraph";
 import { MyProvider, useMyContext } from "./context";
 
 export const ValueSetter: React.FC = () => {
   const { setValue } = useMyContext();
 
-  return <button onClick={() => setValue(new Date().toISOString())}>Update</button>;
+  return <Button onClick={() => setValue(new Date().toISOString())}>Update</Button>;
 };
 
 const ReactContext: React.FC = () => {
@@ -12,11 +14,11 @@ const ReactContext: React.FC = () => {
 
   return (
     <>
-      <p>Current value: {value}</p>
-      <ValueSetter />
       <Message title="Updating the context triggers a render of components that use the context">
         Child components will rerender even though they don't change.
       </Message>
+      <Paragraph>Current value: {value}</Paragraph>
+      <ValueSetter />
     </>
   );
 };

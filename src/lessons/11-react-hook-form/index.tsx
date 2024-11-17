@@ -1,3 +1,4 @@
+import { Input } from "../../components/input";
 import { Message } from "../../components/message";
 import { useForm } from "react-hook-form";
 
@@ -8,15 +9,10 @@ export const ReactHookForm: React.FC = () => {
 
   return (
     <>
-      <div>
-        <label htmlFor={"input"}>Input</label>
-      </div>
-      <div>
-        <input id="input" {...register("value")} />
-      </div>
       <Message title="React Hook Form avoids rerenders">
         The specialized package react-hook-form tries to avoid rerendering.
       </Message>
+      <Input label="Input" {...register("value")} />
     </>
   );
 };

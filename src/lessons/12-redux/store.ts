@@ -6,7 +6,7 @@ interface AppState {
 }
 
 const initialState: AppState = {
-  value: "",
+  value: new Date().toISOString(),
 };
 
 export const selectValue = (state: AppState): string => state.value;
