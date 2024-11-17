@@ -1,22 +1,32 @@
-import { lessons } from "../../router";
-import MenuLink from "../menu-link";
+import React, { PropsWithChildren, useRef, useState } from "react";
+import { Button } from "../button";
+import useClickOutside from "./useClickOutside";
 
-export const Menu: React.FC = () => {
+export const Menu: React.FC<PropsWithChildren> = (props) => {
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const menuRef = useRef<HTMLDivElement>(null);
+
+  const handleClick = () => {
+    if (isMenuOpen) {
+      setIsMenuOpen(false); // Close the menu on any click inside the div
+    }
+  };
+
+  const toggleMenu = (e: React.MouseEvent) => {
+    e.stopPropagation(); // Prevent toggle from immediately closing
+    setIsMenuOpen((prev) => !prev); // Toggle the menu state
+  };
+
+  const closeMenu = () => setIsMenuOpen(false);
+
+  useClickOutside(menuRef, closeMenu);
+
   return (
-    <nav
-      aria-label="Main menu"
-      className="flex flex-col bg-gray-100 text-gray-900 dark:bg-gray-800 dark:text-white p-4 rounded-lg shadow-md"
-    >
-      {lessons
-        .filter((lesson) => !!lesson.path && !!lesson.handle?.title)
-        .map((lesson, index) => (
-          <div
-            key={lesson.path}
-            className={`${index !== lessons.length - 1 ? "border-b border-gray-300 dark:border-gray-600" : ""}`}
-          >
-            <MenuLink path={lesson.path ?? "/404-not-found"}>{lesson.handle?.title}</MenuLink>
-          </div>
-        ))}
-    </nav>
+    <div ref={menuRef} onClick={handleClick}>
+      <Button onClick={toggleMenu} aria-expanded={isMenuOpen} className={"lg:hidden peer"}>
+        {isMenuOpen ? "Close Menu" : "Open Menu"}
+      </Button>
+      {props.children}
+    </div>
   );
 };
