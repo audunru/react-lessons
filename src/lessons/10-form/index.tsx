@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-import { Input } from "../../components/input";
+import Input from "../../components/input";
 import Explanation from "../../components/render-counter";
 
 const FormLesson: React.FC = () => {
