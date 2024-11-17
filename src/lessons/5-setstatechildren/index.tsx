@@ -1,14 +1,9 @@
 import { PropsWithChildren, useState } from "react";
-import { Message } from "../../components/message";
+import { RenderCounter } from "../../components/render-counter";
 import { Button } from "../../components/button";
 
 const Child = () => {
-  return (
-    <Message title="Using the children prop prevents rerendering">
-      This child component is passed through a children prop, so even though the "parent" state changes, it does not
-      rerender.
-    </Message>
-  );
+  return <RenderCounter />;
 };
 
 const SetStateChildren: React.FC<PropsWithChildren> = (props) => {

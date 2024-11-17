@@ -1,5 +1,5 @@
 import { Input } from "../../components/input";
-import { Message } from "../../components/message";
+import { RenderCounter } from "../../components/render-counter";
 import { useState } from "react";
 
 export const Form: React.FC = () => {
@@ -7,9 +7,8 @@ export const Form: React.FC = () => {
 
   return (
     <>
-      <Message title="Typing into an input triggers a render">
-        Every time the input changes, the component state is updated, which triggers a rerender.
-      </Message>
+      <RenderCounter />
+
       <Input label="Input" onChange={(event) => setValue(event.target.value)} value={value} />
     </>
   );

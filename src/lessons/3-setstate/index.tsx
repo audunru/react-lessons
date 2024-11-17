@@ -1,16 +1,15 @@
 import { useState } from "react";
-import { Message } from "../../components/message";
+import { RenderCounter } from "../../components/render-counter";
 import { Button } from "../../components/button";
 
 export const SetState: React.FC = () => {
-  const [state, setState] = useState<number>(1);
+  const [count, setCount] = useState<number>(0);
 
   return (
     <>
-      <Message title="Updating state triggers an extra render">
-        The entire function is run again when state is updated.
-      </Message>
-      <Button onClick={() => setState(state + 1)}>{"Click"}</Button>
+      <RenderCounter />
+
+      <Button onClick={() => setCount(count + 1)}>{`Click count: ${count}`}</Button>
     </>
   );
 };

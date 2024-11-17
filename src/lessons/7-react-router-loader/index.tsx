@@ -1,4 +1,4 @@
-import { Message } from "../../components/message";
+import { RenderCounter } from "../../components/render-counter";
 import { LoaderFunction, useLoaderData } from "react-router-dom";
 import { Paragraph } from "../../components/paragraph";
 
@@ -14,9 +14,8 @@ export const ReactRouterLoader: React.FC = () => {
 
   return (
     <>
-      <Message title="Fetching with React Router">
-        In React Router, you can use loader functions to load data and prepare it before your component renders.
-      </Message>
+      <RenderCounter />
+
       <Paragraph>{`Value is now ${JSON.stringify(value)}`}</Paragraph>
     </>
   );

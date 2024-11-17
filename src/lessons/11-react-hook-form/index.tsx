@@ -1,5 +1,5 @@
 import { Input } from "../../components/input";
-import { Message } from "../../components/message";
+import { RenderCounter } from "../../components/render-counter";
 import { useForm } from "react-hook-form";
 
 export const ReactHookForm: React.FC = () => {
@@ -9,9 +9,7 @@ export const ReactHookForm: React.FC = () => {
 
   return (
     <>
-      <Message title="React Hook Form avoids rerenders">
-        The specialized package react-hook-form tries to avoid rerendering.
-      </Message>
+      <RenderCounter />
       <Input label="Input" {...register("value")} />
     </>
   );

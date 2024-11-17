@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { Message } from "../../components/message";
+import { RenderCounter } from "../../components/render-counter";
 import { Paragraph } from "../../components/paragraph";
 
 export const Fetch: React.FC = () => {
@@ -17,9 +17,8 @@ export const Fetch: React.FC = () => {
 
   return (
     <>
-      <Message title="Fetching data in a useEffect causes an extra render">
-        During the first render, the data is undefined, and updating state will trigger a new render.
-      </Message>
+      <RenderCounter />
+
       <Paragraph>{`Value is now ${JSON.stringify(value)}`}</Paragraph>
     </>
   );
