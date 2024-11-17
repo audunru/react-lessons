@@ -1,10 +1,16 @@
+import "highlight.js/styles/github-dark.css";
+
+import hljs from "highlight.js/lib/core";
+import typescript from "highlight.js/lib/languages/typescript";
+import xml from "highlight.js/lib/languages/xml";
 import React, { useEffect, useRef } from "react";
-import hljs from "highlight.js";
-import "highlight.js/styles/github-dark.css"; // Choose your preferred theme
+
+hljs.registerLanguage("typescript", typescript);
+hljs.registerLanguage("xml", xml);
 
 interface CodeProps {
   children: string;
-  language?: string; // Defaults to 'typescript' if not provided
+  language?: string;
 }
 
 const Code: React.FC<CodeProps> = ({ children, language = "typescript" }) => {
@@ -12,11 +18,8 @@ const Code: React.FC<CodeProps> = ({ children, language = "typescript" }) => {
 
   useEffect(() => {
     if (codeRef.current) {
-      // Unset any previous highlights
       codeRef.current.removeAttribute("data-highlighted");
-      // Highlight the code block
       hljs.highlightElement(codeRef.current);
-      // Mark as highlighted
       codeRef.current.setAttribute("data-highlighted", "true");
     }
   }, [children, language]);
