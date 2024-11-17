@@ -1,6 +1,7 @@
 import { useState } from "react";
-import Explanation from "../../components/render-counter";
+
 import { Button } from "../../components/button";
+import Explanation from "../../components/render-counter";
 
 const Child = () => {
   // This will render again every time parent state changes

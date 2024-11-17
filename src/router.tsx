@@ -1,5 +1,11 @@
+import "./index.css";
+
 import { createHashRouter, Outlet, RouteObject } from "react-router-dom";
+
+import { Code } from "./components/code";
 import { Container } from "./components/container";
+import ErrorElement from "./components/error";
+import { Home } from "./lessons/0-home";
 import RendersOnce from "./lessons/1-renders";
 import RendersOnceCode from "./lessons/1-renders?raw";
 import UseEffect from "./lessons/2-useeffect";
@@ -26,13 +32,8 @@ import ReduxContainer from "./lessons/12-redux";
 import ReduxContainerCode from "./lessons/12-redux?raw";
 import ReduxLocalContainer from "./lessons/13-redux-local";
 import ReduxLocalContainerCode from "./lessons/13-redux-local?raw";
-import { Home } from "./lessons/0-home";
-import { Code } from "./components/code";
-import ErrorElement from "./components/error";
 import CssLesson from "./lessons/14-css";
 import CssLessonCode from "./lessons/14-css?raw";
-
-import "./index.css";
 
 export const lessons: RouteObject[] = [
   {

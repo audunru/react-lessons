@@ -1,6 +1,6 @@
 import { Button } from "../../components/button";
-import Explanation from "../../components/render-counter";
 import { Paragraph } from "../../components/paragraph";
+import Explanation from "../../components/render-counter";
 import { MyProvider, useMyContext } from "./context";
 
 export const UpdateContext: React.FC = () => {

@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
-import Explanation from "../../components/render-counter";
+
 import { Paragraph } from "../../components/paragraph";
+import Explanation from "../../components/render-counter";
 
 const UseEffectLesson: React.FC = () => {
   const [value, setValue] = useState<number>(1);

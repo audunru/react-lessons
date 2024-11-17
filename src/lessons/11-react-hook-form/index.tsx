@@ -1,6 +1,7 @@
+import { useForm } from "react-hook-form";
+
 import { Input } from "../../components/input";
 import Explanation from "../../components/render-counter";
-import { useForm } from "react-hook-form";
 
 const ReactHookFormLesson: React.FC = () => {
   const { register } = useForm<{

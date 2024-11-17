@@ -1,8 +1,9 @@
 import { Provider, useSelector } from "react-redux";
+
+import { Button } from "../../components/button";
+import { Paragraph } from "../../components/paragraph";
 import Explanation from "../../components/render-counter";
 import { receivedValue, selectValue, store, useAppDispatch } from "./store";
-import { Paragraph } from "../../components/paragraph";
-import { Button } from "../../components/button";
 
 export const ValueSetter: React.FC = () => {
   const dispatch = useAppDispatch();

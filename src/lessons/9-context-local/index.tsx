@@ -1,7 +1,7 @@
-import Explanation from "../../components/render-counter";
-import { MyProvider, useMyContext } from "../8-context/context";
-import { UpdateContext } from "../8-context";
 import { Paragraph } from "../../components/paragraph";
+import Explanation from "../../components/render-counter";
+import { UpdateContext } from "../8-context";
+import { MyProvider, useMyContext } from "../8-context/context";
 
 export const ShowContext: React.FC = () => {
   const { value } = useMyContext();

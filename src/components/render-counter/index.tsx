@@ -1,8 +1,9 @@
 import React from "react";
-import { Counter } from "./counter";
-import { Title } from "../title";
-import { Ingress } from "../ingress";
 import { useMatches } from "react-router-dom";
+
+import { Ingress } from "../ingress";
+import { Title } from "../title";
+import { Counter } from "./counter";
 
 const Explanation: React.FC = () => {
   const match = useMatches();

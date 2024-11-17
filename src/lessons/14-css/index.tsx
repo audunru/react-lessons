@@ -1,6 +1,7 @@
 import React, { PropsWithChildren, useState } from "react";
-import Explanation from "../../components/render-counter";
+
 import { Button } from "../../components/button";
+import Explanation from "../../components/render-counter";
 import { Counter } from "../../components/render-counter/counter";
 
 const ToggleButton: React.FC<PropsWithChildren> = (props) => {

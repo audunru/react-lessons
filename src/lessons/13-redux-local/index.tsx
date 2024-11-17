@@ -1,8 +1,9 @@
 import { Provider, useSelector } from "react-redux";
-import Explanation from "../../components/render-counter";
-import { selectValue, store } from "../12-redux/store";
-import { ValueSetter } from "../12-redux";
+
 import { Paragraph } from "../../components/paragraph";
+import Explanation from "../../components/render-counter";
+import { ValueSetter } from "../12-redux";
+import { selectValue, store } from "../12-redux/store";
 
 const ValueDisplay: React.FC = () => {
   const value = useSelector(selectValue);

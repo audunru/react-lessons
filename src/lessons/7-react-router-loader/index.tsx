@@ -1,6 +1,7 @@
-import Explanation from "../../components/render-counter";
 import { LoaderFunction, useLoaderData } from "react-router-dom";
+
 import { Code } from "../../components/code";
+import Explanation from "../../components/render-counter";
 import { SubTitle } from "../../components/sub-title";
 
 export const loader: LoaderFunction = async () => {

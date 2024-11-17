@@ -1,8 +1,9 @@
 import { useEffect, useState } from "react";
-import Explanation from "../../components/render-counter";
+
 import { Code } from "../../components/code";
-import { SubTitle } from "../../components/sub-title";
 import Loader from "../../components/loader";
+import Explanation from "../../components/render-counter";
+import { SubTitle } from "../../components/sub-title";
 
 const FetchLesson: React.FC = () => {
   const [value, setValue] = useState();
