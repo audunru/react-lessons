@@ -1,5 +1,5 @@
-import { NavLink } from "react-router-dom";
 import { lessons } from "../../router";
+import MenuLink from "../menu-link";
 
 export const Menu: React.FC = () => {
   return (
@@ -14,16 +14,7 @@ export const Menu: React.FC = () => {
             key={lesson.path}
             className={`${index !== lessons.length - 1 ? "border-b border-gray-300 dark:border-gray-600" : ""}`}
           >
-            <NavLink
-              to={lesson.path ?? "/404-not-found"}
-              className={({ isActive }) =>
-                isActive
-                  ? "block py-2 text-blue-500 dark:text-blue-700 font-bold"
-                  : "block py-2 text-gray-600 hover:text-blue-600 dark:text-gray-300 dark:hover:text-blue-800"
-              }
-            >
-              {lesson.handle?.title}
-            </NavLink>
+            <MenuLink path={lesson.path ?? "/404-not-found"}>{lesson.handle?.title}</MenuLink>
           </div>
         ))}
     </nav>
