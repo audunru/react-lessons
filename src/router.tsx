@@ -37,6 +37,8 @@ import CssLesson from "./lessons/14-css";
 import CssLessonCode from "./lessons/14-css?raw";
 import CssOnlyLesson from "./lessons/15-css-only";
 import CssOnlyLessonCode from "./lessons/15-css-only?raw";
+import ReactQuery from "./lessons/16-react-query";
+import ReactQueryCode from "./lessons/16-react-query?raw";
 
 export interface Handle {
   title: string;
@@ -275,6 +277,20 @@ export const lessons: RouteObject[] = [
       title: "CSS Only",
       description:
         "Even if a component should respond to user interaction, it's not always necessary to use state to achieve that. Tab through the elements on this page, and a link to the home page will appear.",
+    } satisfies Handle,
+  },
+  {
+    path: "/16-react-query",
+    element: (
+      <>
+        <ReactQuery />
+        <Code>{ReactQueryCode}</Code>
+      </>
+    ),
+    handle: {
+      group: "Fetch",
+      title: "React Query",
+      description: "With React Query, you can cache API responses, handle updates, loading and errors easily.",
     } satisfies Handle,
   },
 ];

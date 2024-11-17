@@ -3,13 +3,10 @@ import { LoaderFunction, useLoaderData } from "react-router-dom";
 import Code from "../../components/code";
 import RenderCount from "../../components/render-count";
 import SubTitle from "../../components/sub-title";
-import { Todo } from "../6-fetch";
+import { fetchTodo, Todo } from "../6-fetch";
 
 export const loader: LoaderFunction = async () => {
-  const response = await fetch("https://jsonplaceholder.typicode.com/todos/1");
-  const data = (await response.json()) as Todo;
-
-  return data;
+  return fetchTodo();
 };
 
 const ReactRouterLoaderLesson: React.FC = () => {
