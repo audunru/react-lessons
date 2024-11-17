@@ -5,10 +5,10 @@ interface MenuLinkProps {
   children: string;
 }
 
-const MenuLink: React.FC<MenuLinkProps> = (props) => {
+const MenuLink: React.FC<MenuLinkProps> = (props: MenuLinkProps) => {
   return (
     <NavLink
-      to={props.path ?? "/404-not-found"}
+      to={props.path}
       className={({ isActive }) =>
         isActive
           ? "block py-2 text-blue-500 dark:text-blue-700 font-bold"

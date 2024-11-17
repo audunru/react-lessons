@@ -8,13 +8,17 @@ const Child = () => {
   return <Explanation />;
 };
 
-const UseStateWithChildren: React.FC<PropsWithChildren> = (props) => {
+const UseStateWithChildren: React.FC<PropsWithChildren> = (props: PropsWithChildren) => {
   const [count, setCount] = useState<number>(0);
 
   return (
     <>
       {props.children}
-      <Button onClick={() => setCount(count + 1)}>{`Click count: ${count}`}</Button>
+      <Button
+        onClick={() => {
+          setCount(count + 1);
+        }}
+      >{`Click count: ${count.toString(10)}`}</Button>
     </>
   );
 };

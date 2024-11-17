@@ -16,7 +16,7 @@ const UseEffectLesson: React.FC = () => {
     <>
       <Explanation />
 
-      <Paragraph>{`Value is now ${value}`}</Paragraph>
+      <Paragraph>{`Value is now ${value.toString(10)}`}</Paragraph>
     </>
   );
 };

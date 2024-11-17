@@ -18,7 +18,9 @@ export const Menu: React.FC<PropsWithChildren> = (props) => {
     setIsMenuOpen((prev) => !prev); // Toggle the menu state
   };
 
-  const closeMenu = () => setIsMenuOpen(false);
+  const closeMenu = () => {
+    setIsMenuOpen(false);
+  };
 
   useClickOutside(menuRef, closeMenu);
 

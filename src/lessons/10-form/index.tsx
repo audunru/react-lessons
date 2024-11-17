@@ -9,7 +9,13 @@ const FormLesson: React.FC = () => {
   return (
     <>
       <Explanation />
-      <Input label="Input" onChange={(event) => setValue(event.target.value)} value={value} />
+      <Input
+        label="Input"
+        onChange={(event) => {
+          setValue(event.target.value);
+        }}
+        value={value}
+      />
     </>
   );
 };

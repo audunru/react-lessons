@@ -1,6 +1,6 @@
 import React from "react";
 
-import { lessons } from "../../router";
+import { Handle, lessons } from "../../router";
 import MenuLink from "../menu-link";
 
 export const MenuItems: React.FC = () => {
@@ -12,10 +12,10 @@ export const MenuItems: React.FC = () => {
       }
     >
       {lessons
-        .filter((lesson) => !!lesson.path && !!lesson.handle?.title)
+        .filter((lesson) => !!lesson.path && lesson.handle && !!(lesson.handle as Handle).title)
         .map((lesson) => (
           <div key={lesson.path} className="border-b border-gray-300 dark:border-gray-600 last:border-b-0">
-            <MenuLink path={lesson.path ?? "/404-not-found"}>{lesson.handle?.title}</MenuLink>
+            <MenuLink path={lesson.path ?? "/404-not-found"}>{(lesson.handle as Handle).title}</MenuLink>
           </div>
         ))}
     </nav>

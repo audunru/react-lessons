@@ -11,14 +11,14 @@ export const Home: React.FC = () => {
       <Paragraph>Make multiple, smaller components instead of big ones.</Paragraph>
       <Paragraph>
         Rerendering is not a <em>bad thing</em>, the question is how often and what has to be rendered. Imagine you are
-        on a page with an email form field for a newsletter and 10.000 unrelated table rows. You probably don't want to
+        on a page with an email form field for a newsletter and 10.000 unrelated table rows. You probably do not want to
         rerender the entire table when the user types into the input field.
       </Paragraph>
       <Paragraph>
-        Your components will use lots of variables, but those variables don't have to be <em>state</em>.
+        Your components will use lots of variables, but those variables do not have to be <em>state</em>.
       </Paragraph>
       <Paragraph>
-        useEffect is not <em>forbidden</em>, but it's often not necessary.
+        useEffect is not <em>forbidden</em>, but it is often not necessary.
       </Paragraph>
       <Paragraph>
         Popular libraries like react-router, redux or react-hook-form each have their own recommended patterns for

@@ -12,7 +12,13 @@ const ToggleButton: React.FC<PropsWithChildren> = (props) => {
 
   return (
     <>
-      <Button aria-expanded={isActive} onClick={() => setIsActive((x) => !x)} className="peer">
+      <Button
+        aria-expanded={isActive}
+        onClick={() => {
+          setIsActive((x) => !x);
+        }}
+        className="peer"
+      >
         Toggle
       </Button>
       <div className={"hidden peer-aria-expanded:block"}>{props.children}</div>

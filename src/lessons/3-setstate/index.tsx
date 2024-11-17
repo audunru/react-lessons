@@ -10,7 +10,11 @@ const UseStateLesson: React.FC = () => {
     <>
       <Explanation />
 
-      <Button onClick={() => setCount(count + 1)}>{`Click count: ${count}`}</Button>
+      <Button
+        onClick={() => {
+          setCount(count + 1);
+        }}
+      >{`Click count: ${count.toString(10)}`}</Button>
     </>
   );
 };
