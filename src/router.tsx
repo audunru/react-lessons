@@ -3,9 +3,9 @@ import "./index.css";
 import React from "react";
 import { createHashRouter, Outlet, RouteObject } from "react-router-dom";
 
-import Code from "./components/code";
 import Container from "./components/container";
 import ErrorElement from "./components/error";
+import Code from "./components/lesson-code";
 import { Home } from "./lessons/0-home";
 import RendersOnce from "./lessons/1-renders";
 import RendersOnceCode from "./lessons/1-renders?raw";
@@ -109,7 +109,7 @@ export const lessons: RouteObject[] = [
       group: "State",
       title: "useState with child",
       description:
-        "The child component rerenders when parent state changes, even though nothing has changed in the child.",
+        "Child components rerender when parent state changes, even if nothing changes in the child components.",
     } satisfies Handle,
   },
   {
@@ -210,9 +210,8 @@ export const lessons: RouteObject[] = [
     ),
     handle: {
       group: "State",
-      title: "Form with React Hook Form",
-      description:
-        "The package React Hook Form tries to avoid rerendering. Typing in the input field does not trigger a rerender.",
+      title: "React Hook Form",
+      description: "React Hook Form tries to avoid rerendering. Typing in the input field does not trigger a rerender.",
     } satisfies Handle,
   },
   {
@@ -258,8 +257,8 @@ export const lessons: RouteObject[] = [
       title: "CSS Toggle",
       description: (
         <>
-          State is used to control the <strong className="font-mono">aria-expanded</strong> attribute on the button for
-          accessibility reasons, but the visibility is controlled by CSS.
+          State is used to control the <code>aria-expanded</code> attribute on the button for accessibility reasons, but
+          the visibility is controlled by CSS.
         </>
       ),
     } satisfies Handle,

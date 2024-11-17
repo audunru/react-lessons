@@ -3,7 +3,6 @@ import { useEffect, useState } from "react";
 import Code from "../../components/code";
 import Loader from "../../components/loader";
 import RenderCount from "../../components/render-count";
-import SubTitle from "../../components/sub-title";
 
 export interface Todo {
   userId: number;
@@ -38,14 +37,7 @@ const FetchLesson: React.FC = () => {
   return (
     <>
       <RenderCount />
-      {value ? (
-        <>
-          <SubTitle>API response</SubTitle>
-          <Code>{JSON.stringify(value, null, 2)}</Code>
-        </>
-      ) : (
-        <Loader />
-      )}
+      {value ? <Code title="API response">{JSON.stringify(value, null, 2)}</Code> : <Loader />}
     </>
   );
 };
