@@ -9,7 +9,7 @@ const UseEffectLesson: React.FC = () => {
   useEffect(() => {
     // Could instead do `Value is now ${value + 1}` or const valuePlusOne = value + 1
     // in the function body, there is no need to use state here.
-    setValue(value + 1);
+    setValue((v) => v + 1);
   }, []);
 
   return (
@@ -20,4 +20,5 @@ const UseEffectLesson: React.FC = () => {
     </>
   );
 };
+
 export default UseEffectLesson;
