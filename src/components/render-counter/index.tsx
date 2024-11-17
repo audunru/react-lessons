@@ -4,7 +4,7 @@ import { Title } from "../title";
 import { Ingress } from "../ingress";
 import { useMatches } from "react-router-dom";
 
-export const RenderCounter: React.FC = () => {
+const Explanation: React.FC = () => {
   const match = useMatches();
 
   const handle = match[match.length - 1].handle;
@@ -17,3 +17,5 @@ export const RenderCounter: React.FC = () => {
     </>
   );
 };
+
+export default Explanation;

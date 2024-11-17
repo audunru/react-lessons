@@ -1,8 +1,8 @@
 import { useEffect, useState } from "react";
-import { RenderCounter } from "../../components/render-counter";
+import Explanation from "../../components/render-counter";
 import { Paragraph } from "../../components/paragraph";
 
-export const Fetch: React.FC = () => {
+const FetchLesson: React.FC = () => {
   const [value, setValue] = useState();
 
   useEffect(() => {
@@ -17,9 +17,11 @@ export const Fetch: React.FC = () => {
 
   return (
     <>
-      <RenderCounter />
+      <Explanation />
 
       <Paragraph>{`Value is now ${JSON.stringify(value)}`}</Paragraph>
     </>
   );
 };
+
+export default FetchLesson;

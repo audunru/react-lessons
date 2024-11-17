@@ -1,4 +1,4 @@
-import { RenderCounter } from "../../components/render-counter";
+import Explanation from "../../components/render-counter";
 import { MyProvider, useMyContext } from "../8-context/context";
 import { ValueSetter } from "../8-context";
 import { Paragraph } from "../../components/paragraph";
@@ -11,7 +11,7 @@ export const ValueDisplay: React.FC = () => {
 const ReactContextLocal: React.FC = () => {
   return (
     <>
-      <RenderCounter />
+      <Explanation />
 
       <ValueDisplay />
       <ValueSetter />
@@ -19,10 +19,12 @@ const ReactContextLocal: React.FC = () => {
   );
 };
 
-export const ReactContextLocalContainer: React.FC = () => {
+const ReactContextDistributedLesson: React.FC = () => {
   return (
     <MyProvider>
       <ReactContextLocal />
     </MyProvider>
   );
 };
+
+export default ReactContextDistributedLesson;

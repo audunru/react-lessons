@@ -1,5 +1,5 @@
 import { Provider, useSelector } from "react-redux";
-import { RenderCounter } from "../../components/render-counter";
+import Explanation from "../../components/render-counter";
 import { receivedValue, selectValue, store, useAppDispatch } from "./store";
 import { Paragraph } from "../../components/paragraph";
 import { Button } from "../../components/button";
@@ -15,17 +15,19 @@ const Redux: React.FC = () => {
 
   return (
     <>
-      <RenderCounter />
+      <Explanation />
       <Paragraph>Current value: {value}</Paragraph>
       <ValueSetter />
     </>
   );
 };
 
-export const ReduxContainer: React.FC = () => {
+const ReduxLesson: React.FC = () => {
   return (
     <Provider store={store}>
       <Redux />
     </Provider>
   );
 };
+
+export default ReduxLesson;

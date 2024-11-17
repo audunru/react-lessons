@@ -1,5 +1,7 @@
-import { RenderCounter } from "../../components/render-counter";
+import Explanation from "../../components/render-counter";
 
-export const RendersOnce: React.FC = () => {
-  return <RenderCounter />;
+const FunctionalComponentLesson: React.FC = () => {
+  return <Explanation />;
 };
+
+export default FunctionalComponentLesson;

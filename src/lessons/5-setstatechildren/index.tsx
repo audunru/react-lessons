@@ -1,12 +1,12 @@
 import { PropsWithChildren, useState } from "react";
-import { RenderCounter } from "../../components/render-counter";
+import Explanation from "../../components/render-counter";
 import { Button } from "../../components/button";
 
 const Child = () => {
-  return <RenderCounter />;
+  return <Explanation />;
 };
 
-const SetStateChildren: React.FC<PropsWithChildren> = (props) => {
+const UseStateWithChildren: React.FC<PropsWithChildren> = (props) => {
   const [count, setCount] = useState<number>(0);
 
   return (
@@ -17,10 +17,12 @@ const SetStateChildren: React.FC<PropsWithChildren> = (props) => {
   );
 };
 
-export const SetStateChildrenContainer = () => {
+const UseStateWithChildrenLesson = () => {
   return (
-    <SetStateChildren>
+    <UseStateWithChildren>
       <Child />
-    </SetStateChildren>
+    </UseStateWithChildren>
   );
 };
+
+export default UseStateWithChildrenLesson;

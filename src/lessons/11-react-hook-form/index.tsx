@@ -1,16 +1,18 @@
 import { Input } from "../../components/input";
-import { RenderCounter } from "../../components/render-counter";
+import Explanation from "../../components/render-counter";
 import { useForm } from "react-hook-form";
 
-export const ReactHookForm: React.FC = () => {
+const ReactHookFormLesson: React.FC = () => {
   const { register } = useForm<{
     value: string;
   }>();
 
   return (
     <>
-      <RenderCounter />
+      <Explanation />
       <Input label="Input" {...register("value")} />
     </>
   );
 };
+
+export default ReactHookFormLesson;

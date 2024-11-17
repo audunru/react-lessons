@@ -1,5 +1,5 @@
 import { Button } from "../../components/button";
-import { RenderCounter } from "../../components/render-counter";
+import Explanation from "../../components/render-counter";
 import { Paragraph } from "../../components/paragraph";
 import { MyProvider, useMyContext } from "./context";
 
@@ -14,18 +14,19 @@ const ReactContext: React.FC = () => {
 
   return (
     <>
-      <RenderCounter />
-
+      <Explanation />
       <Paragraph>Current value: {value}</Paragraph>
       <ValueSetter />
     </>
   );
 };
 
-export const ReactContextContainer: React.FC = () => {
+const ReactContextLesson: React.FC = () => {
   return (
     <MyProvider>
       <ReactContext />
     </MyProvider>
   );
 };
+
+export default ReactContextLesson;

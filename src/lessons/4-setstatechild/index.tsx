@@ -1,12 +1,12 @@
 import { useState } from "react";
-import { RenderCounter } from "../../components/render-counter";
+import Explanation from "../../components/render-counter";
 import { Button } from "../../components/button";
 
 const Child = () => {
-  return <RenderCounter />;
+  return <Explanation />;
 };
 
-export const SetStateChild: React.FC = () => {
+const UseStateWithChildLesson: React.FC = () => {
   const [count, setCount] = useState<number>(0);
 
   return (
@@ -16,3 +16,5 @@ export const SetStateChild: React.FC = () => {
     </>
   );
 };
+
+export default UseStateWithChildLesson;

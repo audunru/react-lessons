@@ -1,8 +1,8 @@
 import { useEffect, useState } from "react";
-import { RenderCounter } from "../../components/render-counter";
+import Explanation from "../../components/render-counter";
 import { Paragraph } from "../../components/paragraph";
 
-export const UseEffect: React.FC = () => {
+const UseEffectLesson: React.FC = () => {
   const [value, setValue] = useState<number>(1);
 
   useEffect(() => {
@@ -11,9 +11,10 @@ export const UseEffect: React.FC = () => {
 
   return (
     <>
-      <RenderCounter />
+      <Explanation />
 
       <Paragraph>{`Value is now ${value}`}</Paragraph>
     </>
   );
 };
+export default UseEffectLesson;

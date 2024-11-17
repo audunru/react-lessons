@@ -1,4 +1,4 @@
-import { RenderCounter } from "../../components/render-counter";
+import Explanation from "../../components/render-counter";
 import { LoaderFunction, useLoaderData } from "react-router-dom";
 import { Paragraph } from "../../components/paragraph";
 
@@ -9,14 +9,16 @@ export const loader: LoaderFunction = async () => {
   return data;
 };
 
-export const ReactRouterLoader: React.FC = () => {
+const ReactRouterLoaderLesson: React.FC = () => {
   const value = useLoaderData();
 
   return (
     <>
-      <RenderCounter />
+      <Explanation />
 
       <Paragraph>{`Value is now ${JSON.stringify(value)}`}</Paragraph>
     </>
   );
 };
+
+export default ReactRouterLoaderLesson;
