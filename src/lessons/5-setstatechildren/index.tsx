@@ -1,5 +1,5 @@
 import { PropsWithChildren, useState } from "react";
-import Message from "../../components/message";
+import { Message } from "../../components/message";
 
 const Child = () => {
   return (
@@ -21,12 +21,10 @@ const SetStateChildren: React.FC<PropsWithChildren> = (props) => {
   );
 };
 
-const SetStateChildrenContainer = () => {
+export const SetStateChildrenContainer = () => {
   return (
     <SetStateChildren>
       <Child />
     </SetStateChildren>
   );
 };
-
-export default SetStateChildrenContainer;

@@ -1,8 +1,8 @@
-import Message from "../../components/message";
+import { Message } from "../../components/message";
 import { MyProvider, useMyContext } from "../8-context/context";
 import { ValueSetter } from "../8-context";
 
-const ValueDisplay: React.FC = () => {
+export const ValueDisplay: React.FC = () => {
   const { value } = useMyContext();
   return <p>Current value: {value}</p>;
 };
@@ -19,12 +19,10 @@ const ReactContextLocal: React.FC = () => {
   );
 };
 
-const ReactContextLocalContainer: React.FC = () => {
+export const ReactContextLocalContainer: React.FC = () => {
   return (
     <MyProvider>
       <ReactContextLocal />
     </MyProvider>
   );
 };
-
-export default ReactContextLocalContainer;

@@ -1,7 +1,7 @@
 import { useState } from "react";
-import Message from "../../components/message";
+import { Message } from "../../components/message";
 
-const SetState: React.FC = () => {
+export const SetState: React.FC = () => {
   const [state, setState] = useState<number>(1);
 
   return (
@@ -13,5 +13,3 @@ const SetState: React.FC = () => {
     </>
   );
 };
-
-export default SetState;

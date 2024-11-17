@@ -1,5 +1,5 @@
 import { useState } from "react";
-import Message from "../../components/message";
+import { Message } from "../../components/message";
 
 const Child = () => {
   return (
@@ -9,7 +9,7 @@ const Child = () => {
   );
 };
 
-const SetStateChild: React.FC = () => {
+export const SetStateChild: React.FC = () => {
   const [count, setCount] = useState<number>(0);
 
   return (
@@ -19,5 +19,3 @@ const SetStateChild: React.FC = () => {
     </>
   );
 };
-
-export default SetStateChild;

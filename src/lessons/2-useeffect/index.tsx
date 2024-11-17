@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
-import Message from "../../components/message";
+import { Message } from "../../components/message";
 
-const UseEffect: React.FC = () => {
+export const UseEffect: React.FC = () => {
   const [value, setValue] = useState<number>(1);
 
   useEffect(() => {
@@ -18,5 +18,3 @@ const UseEffect: React.FC = () => {
     </>
   );
 };
-
-export default UseEffect;

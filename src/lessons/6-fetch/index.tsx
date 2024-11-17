@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
-import Message from "../../components/message";
+import { Message } from "../../components/message";
 
-const Fetch: React.FC = () => {
+export const Fetch: React.FC = () => {
   const [value, setValue] = useState();
 
   useEffect(() => {
@@ -23,5 +23,3 @@ const Fetch: React.FC = () => {
     </>
   );
 };
-
-export default Fetch;

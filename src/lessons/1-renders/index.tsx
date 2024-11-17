@@ -1,6 +1,6 @@
-import Message from "../../components/message";
+import { Message } from "../../components/message";
 
-const RendersOnce: React.FC = () => {
+export const RendersOnce: React.FC = () => {
   return (
     <Message title="A component renders once">
       Everything in the function body happens every time the component renders. Don't let the JSX syntax trick you, it's
@@ -8,5 +8,3 @@ const RendersOnce: React.FC = () => {
     </Message>
   );
 };
-
-export default RendersOnce;

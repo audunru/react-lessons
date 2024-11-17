@@ -1,21 +1,17 @@
 import React from "react";
-import RenderCount from "../render";
+import { RenderCount } from "../render";
 
 interface MessageProps {
   title: string;
   children: React.ReactNode;
 }
 
-const Message: React.FC<MessageProps> = (props) => {
+export const Message: React.FC<MessageProps> = (props) => {
   return (
     <>
       <RenderCount />
-      <dl>
-        <dt>{props.title}</dt>
-        <dd>{props.children}</dd>
-      </dl>
+      <h1>{props.title}</h1>
+      <p>{props.children}</p>
     </>
   );
 };
-
-export default Message;

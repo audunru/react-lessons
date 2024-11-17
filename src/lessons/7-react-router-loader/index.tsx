@@ -1,4 +1,4 @@
-import Message from "../../components/message";
+import { Message } from "../../components/message";
 import { LoaderFunction, useLoaderData } from "react-router-dom";
 
 export const loader: LoaderFunction = async () => {
@@ -8,7 +8,7 @@ export const loader: LoaderFunction = async () => {
   return data;
 };
 
-const ReactRouterLoader: React.FC = () => {
+export const ReactRouterLoader: React.FC = () => {
   const value = useLoaderData();
 
   return (
@@ -20,5 +20,3 @@ const ReactRouterLoader: React.FC = () => {
     </>
   );
 };
-
-export default ReactRouterLoader;

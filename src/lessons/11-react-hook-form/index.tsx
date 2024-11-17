@@ -1,7 +1,7 @@
-import Message from "../../components/message";
+import { Message } from "../../components/message";
 import { useForm } from "react-hook-form";
 
-const ReactHookForm: React.FC = () => {
+export const ReactHookForm: React.FC = () => {
   const { register } = useForm<{
     value: string;
   }>();
@@ -20,5 +20,3 @@ const ReactHookForm: React.FC = () => {
     </>
   );
 };
-
-export default ReactHookForm;

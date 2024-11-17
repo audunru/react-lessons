@@ -1,4 +1,4 @@
-import Message from "../../components/message";
+import { Message } from "../../components/message";
 import { MyProvider, useMyContext } from "./context";
 
 export const ValueSetter: React.FC = () => {
@@ -21,12 +21,10 @@ const ReactContext: React.FC = () => {
   );
 };
 
-const ReactContextContainer: React.FC = () => {
+export const ReactContextContainer: React.FC = () => {
   return (
     <MyProvider>
       <ReactContext />
     </MyProvider>
   );
 };
-
-export default ReactContextContainer;

@@ -1,5 +1,5 @@
 import { Provider, useSelector } from "react-redux";
-import Message from "../../components/message";
+import { Message } from "../../components/message";
 import { selectValue, store } from "../12-redux/store";
 import { ValueSetter } from "../12-redux";
 
@@ -20,12 +20,10 @@ const Redux: React.FC = () => {
   );
 };
 
-const ReduxContainer: React.FC = () => {
+export const ReduxLocalContainer: React.FC = () => {
   return (
     <Provider store={store}>
       <Redux />
     </Provider>
   );
 };
-
-export default ReduxContainer;

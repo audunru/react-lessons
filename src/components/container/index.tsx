@@ -3,7 +3,7 @@ import { NavLink } from "react-router-dom";
 
 import "./styles.css";
 
-const Container: React.FC<PropsWithChildren> = (props) => {
+export const Container: React.FC<PropsWithChildren> = (props) => {
   return (
     <div
       style={{
@@ -33,5 +33,3 @@ const Container: React.FC<PropsWithChildren> = (props) => {
     </div>
   );
 };
-
-export default Container;

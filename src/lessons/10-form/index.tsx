@@ -1,7 +1,7 @@
-import Message from "../../components/message";
+import { Message } from "../../components/message";
 import { useState } from "react";
 
-const Form: React.FC = () => {
+export const Form: React.FC = () => {
   const [value, setValue] = useState<string>("");
 
   return (
@@ -18,5 +18,3 @@ const Form: React.FC = () => {
     </>
   );
 };
-
-export default Form;
