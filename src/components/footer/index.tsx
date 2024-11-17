@@ -1,15 +1,16 @@
 import React from "react";
 
 import Link from "../link";
-import Paragraph from "../paragraph";
+import ThemeToggle from "../theme-toggle";
 
 const Footer: React.FC = () => {
   return (
     <>
       <footer className="mt-10 pt-10 border-t-2 border-gray-300 dark:border-gray-600">
-        <Paragraph>
+        <div className="flex gap-4 items-center">
           <Link href="https://github.com/audunru/react-lessons">GitHub</Link>
-        </Paragraph>
+          <ThemeToggle />
+        </div>
       </footer>
     </>
   );

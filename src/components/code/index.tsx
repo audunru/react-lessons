@@ -26,7 +26,7 @@ const Code: React.FC<CodeProps> = ({ children, language = "typescript", title })
   }, [children, language]);
 
   return (
-    <pre className="font-mono bg-gray-100 dark:bg-gray-800 p-4 rounded-lg overflow-x-auto shadow-md">
+    <pre className="font-mono">
       {title && <div className="mb-2 text-sm font-bold text-gray-800 dark:text-gray-300">{title}</div>}
       <code ref={codeRef} className={`language-${language}`}>
         {children}
