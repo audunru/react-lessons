@@ -5,6 +5,8 @@ import typescript from "highlight.js/lib/languages/typescript";
 import xml from "highlight.js/lib/languages/xml";
 import { useEffect, useRef } from "react";
 
+import SubTitle from "../sub-title";
+
 hljs.registerLanguage("typescript", typescript);
 hljs.registerLanguage("xml", xml);
 
@@ -26,12 +28,14 @@ const Code = ({ children, language = "typescript", title }: CodeProps) => {
   }, [children, language]);
 
   return (
-    <pre className="font-mono">
-      {title && <div className="mb-2 text-sm font-bold text-gray-800 dark:text-gray-300">{title}</div>}
-      <code ref={codeRef} className={`language-${language}`}>
-        {children}
-      </code>
-    </pre>
+    <>
+      {title && <SubTitle>{title}</SubTitle>}
+      <pre className="font-mono">
+        <code ref={codeRef} className={`language-${language}`}>
+          {children}
+        </code>
+      </pre>
+    </>
   );
 };
 
