@@ -14,12 +14,12 @@ const About = () => {
       </Paragraph>
       <Paragraph>CSS can be used for many interactive effects without any need for JavaScript or React code.</Paragraph>
       <Paragraph>
-        Updating state in useEffect is not <em>forbidden</em>, but it is often not necessary.
+        Updating state in useEffect is not <em>forbidden</em>, but it&apos;s often not necessary.
       </Paragraph>
       <Paragraph>
-        Rerendering is not a <em>bad thing</em>, the question is how often and what has to be rendered. Imagine you are
-        on a page with a newsletter signup form and 10.000 unrelated table rows. You probably do not want to rerender
-        the entire table when the user types their email.
+        Rerendering is not a <em>bad thing</em>, the question is how often and what has to be rendered. Imagine
+        you&apos;re on a page with a newsletter signup form and 10.000 unrelated table rows. You probably do not want to
+        rerender the entire table when the user types their email.
       </Paragraph>
       <Paragraph>
         Popular libraries like React Router, Redux Toolkit or React Hook Form each have their own recommended patterns

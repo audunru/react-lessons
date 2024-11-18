@@ -15,8 +15,8 @@ const Memo = () => {
   return (
     <>
       <Paragraph>
-        Splitting a large component into multiple components, and moving state down to where it is needed will achieve
-        the same effect.
+        Splitting a large component into multiple components, and moving state down to where it&apos;s needed will
+        achieve the same effect.
       </Paragraph>
 
       <Stack>
