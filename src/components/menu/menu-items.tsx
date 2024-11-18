@@ -24,7 +24,7 @@ const MenuItems = () => {
     <nav
       aria-label="Main menu"
       className={
-        "hidden peer-aria-expanded:flex peer-aria-expanded:mt-3 flex-col lg:mt-0 lg:flex bg-gray-100 text-gray-900 dark:bg-gray-800 dark:text-white px-4 py-2 rounded-lg shadow-md absolute lg:static"
+        "hidden peer-aria-expanded:flex peer-aria-expanded:mt-3 flex-col lg:mt-0 lg:flex z-10 bg-gray-100 text-gray-900 dark:bg-gray-800 dark:text-white px-4 py-2 rounded-lg shadow-md absolute lg:static"
       }
     >
       {Object.entries(groupedLessons).map(([groupName, lessons]) => (
