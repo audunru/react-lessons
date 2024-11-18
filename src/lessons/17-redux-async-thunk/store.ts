@@ -24,7 +24,7 @@ export const fetchTodo = createAsyncThunk<Todo, undefined, { rejectValue: Error 
     } catch {
       return rejectWithValue(new Error("Failed to fetch"));
     }
-  }
+  },
 );
 
 export const getIsLoaded = (state: TodoState) => state.status === "succeeded";

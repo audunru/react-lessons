@@ -12,6 +12,6 @@ if (rootElement) {
   createRoot(rootElement).render(
     <QueryClientProvider client={queryClient}>
       <RouterProvider router={router} />
-    </QueryClientProvider>
+    </QueryClientProvider>,
   );
 }
