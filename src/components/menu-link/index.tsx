@@ -6,7 +6,7 @@ interface MenuLinkProps {
   children: string;
 }
 
-const MenuLink: React.FC<MenuLinkProps> = (props: MenuLinkProps) => {
+const MenuLink = (props: MenuLinkProps) => {
   return (
     <NavLink
       to={props.path}
@@ -15,7 +15,7 @@ const MenuLink: React.FC<MenuLinkProps> = (props: MenuLinkProps) => {
           "block text-lg py-2",
           isActive
             ? "text-blue-500 dark:text-blue-700 font-bold"
-            : "text-gray-600 hover:text-blue-700 dark:text-gray-100 dark:hover:text-blue-600",
+            : "text-gray-600 hover:text-blue-700 dark:text-gray-100 dark:hover:text-blue-600"
         )
       }
     >

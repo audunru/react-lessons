@@ -3,7 +3,7 @@ import { useEffect, useState } from "react";
 import Paragraph from "../../components/paragraph";
 import RenderCount from "../../components/render-count";
 
-const UseEffect: React.FC = () => {
+const UseEffect = () => {
   const [count, setCount] = useState<number>(1);
 
   useEffect(() => {

@@ -1,11 +1,9 @@
-import React from "react";
-
 import Ingress from "../ingress";
 import Title from "../title";
 import Counter from "./counter";
 import useHandle from "./useHandle";
 
-const RenderCount: React.FC = () => {
+const RenderCount = () => {
   const handle = useHandle();
 
   return (

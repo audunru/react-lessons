@@ -3,13 +3,13 @@ import RenderCount from "../../components/render-count";
 import { UpdateContext } from "../8-context";
 import { MyProvider, useMyContext } from "../8-context/context";
 
-export const ShowContext: React.FC = () => {
+export const ShowContext = () => {
   const { value } = useMyContext();
 
   return <Paragraph>Last updated: {value}</Paragraph>;
 };
 
-const ReactContextLocal: React.FC = () => {
+const ReactContextLocal = () => {
   return (
     <>
       <RenderCount />
@@ -19,7 +19,7 @@ const ReactContextLocal: React.FC = () => {
   );
 };
 
-const ReactContextDistributed: React.FC = () => {
+const ReactContextDistributed = () => {
   return (
     <MyProvider>
       <ReactContextLocal />

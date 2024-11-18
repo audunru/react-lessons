@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import { useEffect } from "react";
 import { Provider } from "react-redux";
 
 import Alert from "../../components/alert";
@@ -18,7 +18,7 @@ import {
   useAppSelector,
 } from "./store";
 
-const ReduxAsyncThunk: React.FC = () => {
+const ReduxAsyncThunk = () => {
   const dispatch = useAppDispatch();
   const isLoading = useAppSelector(getIsLoading);
   const isLoaded = useAppSelector(getIsLoaded);
@@ -51,7 +51,7 @@ const ReduxAsyncThunk: React.FC = () => {
   );
 };
 
-const ReduxAsyncThunkWrapper: React.FC = () => {
+const ReduxAsyncThunkWrapper = () => {
   return (
     <Provider store={store}>
       <ReduxAsyncThunk />

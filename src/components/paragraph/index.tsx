@@ -1,6 +1,6 @@
-import React, { PropsWithChildren } from "react";
+import { PropsWithChildren } from "react";
 
-const Paragraph: React.FC<PropsWithChildren> = (props) => (
+const Paragraph = (props: PropsWithChildren) => (
   <p className="text-lg dark:text-gray-100 max-w-2xl">{props.children}</p>
 );
 

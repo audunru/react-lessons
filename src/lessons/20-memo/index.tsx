@@ -4,11 +4,12 @@ import Box from "../../components/box";
 import Input from "../../components/input";
 import Paragraph from "../../components/paragraph";
 import RenderCount from "../../components/render-count";
+import Stack from "../../components/stack";
 import { Value } from "../19-props";
 
 const MemoizedValue = React.memo(Value);
 
-const Memo: React.FC = () => {
+const Memo = () => {
   const [valueA, setValueA] = useState<string>("");
   const [valueB, setValueB] = useState<string>("");
 
@@ -21,7 +22,7 @@ const Memo: React.FC = () => {
         the same effect.
       </Paragraph>
 
-      <div className="flex gap-4">
+      <Stack>
         <Box>
           <Input
             label="Input A"
@@ -43,7 +44,7 @@ const Memo: React.FC = () => {
           />
           <MemoizedValue value={valueB} />
         </Box>
-      </div>
+      </Stack>
     </>
   );
 };

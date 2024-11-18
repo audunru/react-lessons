@@ -1,8 +1,6 @@
-import React from "react";
-
 import Alert from "../alert";
 
-const Error: React.FC = () => {
+const Error = () => {
   return (
     <div className="container mx-auto px-4">
       <Alert type="error">

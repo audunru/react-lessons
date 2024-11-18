@@ -22,7 +22,7 @@ export const getTodo = async (): Promise<Todo> => {
   return data;
 };
 
-const Fetch: React.FC = () => {
+const Fetch = () => {
   const [value, setValue] = useState<Todo>();
 
   useEffect(() => {

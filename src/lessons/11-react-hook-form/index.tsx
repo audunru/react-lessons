@@ -4,7 +4,7 @@ import Input from "../../components/input";
 import Paragraph from "../../components/paragraph";
 import RenderCount from "../../components/render-count";
 
-const ReactHookForm: React.FC = () => {
+const ReactHookForm = () => {
   const { register } = useForm<{
     value: string;
   }>();

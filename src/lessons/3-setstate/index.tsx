@@ -3,7 +3,7 @@ import { useState } from "react";
 import Button from "../../components/button";
 import RenderCount from "../../components/render-count";
 
-const UseState: React.FC = () => {
+const UseState = () => {
   const [count, setCount] = useState<number>(0);
 
   const handleClick = () => {

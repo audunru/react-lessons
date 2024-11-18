@@ -3,7 +3,7 @@ import React from "react";
 import { Handle, lessons } from "../../router";
 import MenuLink from "../menu-link";
 
-const MenuItems: React.FC = () => {
+const MenuItems = () => {
   const groupedLessons = lessons.reduce<Record<string, typeof lessons>>((acc, lesson) => {
     const handle = lesson.handle as Handle | undefined;
     const group = handle?.group ?? "";

@@ -5,12 +5,12 @@ interface LinkProps {
   children: React.ReactNode;
 }
 
-const Link: React.FC<LinkProps> = ({ href, children }) => (
+const Link = (props: LinkProps) => (
   <a
-    href={href}
+    href={props.href}
     className="text-blue-600 dark:text-blue-400 hover:underline focus:outline-none focus:ring-2 focus:ring-blue-500 dark:focus:ring-blue-300 transition-colors"
   >
-    {children}
+    {props.children}
   </a>
 );
 

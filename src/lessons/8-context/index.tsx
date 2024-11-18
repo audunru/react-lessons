@@ -3,7 +3,7 @@ import Paragraph from "../../components/paragraph";
 import RenderCount from "../../components/render-count";
 import { MyProvider, useMyContext } from "./context";
 
-export const UpdateContext: React.FC = () => {
+export const UpdateContext = () => {
   const { setValue } = useMyContext();
 
   const handleClick = () => {
@@ -13,7 +13,7 @@ export const UpdateContext: React.FC = () => {
   return <Button onClick={handleClick}>Update</Button>;
 };
 
-const ReactContext: React.FC = () => {
+const ReactContext = () => {
   const { value } = useMyContext();
 
   return (
@@ -27,7 +27,7 @@ const ReactContext: React.FC = () => {
   );
 };
 
-const ReactContextWrapper: React.FC = () => {
+const ReactContextWrapper = () => {
   return (
     <MyProvider>
       <ReactContext />

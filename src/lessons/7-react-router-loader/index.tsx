@@ -10,7 +10,7 @@ export const loader: LoaderFunction = async () => {
   return getTodo();
 };
 
-const ReactRouterLoader: React.FC = () => {
+const ReactRouterLoader = () => {
   const value = useLoaderData() as Todo;
   const navigation = useNavigation();
 

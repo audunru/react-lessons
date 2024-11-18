@@ -2,12 +2,12 @@ import Paragraph from "../../components/paragraph";
 import SubTitle from "../../components/sub-title";
 import Title from "../../components/title";
 
-const About: React.FC = () => {
+const About = () => {
   return (
     <>
       <Title>React Lessons</Title>
       <Paragraph>A collection of examples how common React patterns affect client side rendering.</Paragraph>
-      <SubTitle>Recommandations and general tips</SubTitle>
+      <SubTitle>Recommendations and general tips</SubTitle>
       <Paragraph>Make multiple, smaller components instead of big ones.</Paragraph>
       <Paragraph>
         Your components can use lots of variables, but those variables do not have to be in <em>state</em>.

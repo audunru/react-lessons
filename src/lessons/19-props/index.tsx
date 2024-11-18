@@ -1,16 +1,17 @@
-import React, { useState } from "react";
+import { useState } from "react";
 
 import Box from "../../components/box";
 import Input from "../../components/input";
 import Paragraph from "../../components/paragraph";
 import RenderCount from "../../components/render-count";
 import Counter from "../../components/render-count/counter";
+import Stack from "../../components/stack";
 
 interface ValueProps {
   value: string;
 }
 
-export const Value: React.FC<ValueProps> = (props) => {
+export const Value = (props: ValueProps) => {
   return (
     <>
       <Paragraph>Value is {props.value}</Paragraph>
@@ -20,7 +21,7 @@ export const Value: React.FC<ValueProps> = (props) => {
   );
 };
 
-const Props: React.FC = () => {
+const Props = () => {
   const [valueA, setValueA] = useState<string>("");
   const [valueB, setValueB] = useState<string>("");
 
@@ -28,7 +29,7 @@ const Props: React.FC = () => {
     <>
       <RenderCount />
 
-      <div className="flex gap-4">
+      <Stack>
         <Box>
           <Input
             label="Input A"
@@ -50,7 +51,7 @@ const Props: React.FC = () => {
           />
           <Value value={valueB} />
         </Box>
-      </div>
+      </Stack>
     </>
   );
 };

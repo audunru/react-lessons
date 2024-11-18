@@ -5,12 +5,12 @@ import RenderCount from "../../components/render-count";
 import { ValueSetter } from "../12-redux";
 import { selectValue, store } from "../12-redux/store";
 
-const ValueDisplay: React.FC = () => {
+const ValueDisplay = () => {
   const value = useSelector(selectValue);
   return <Paragraph>Last updated: {value}</Paragraph>;
 };
 
-const ReduxDistributed: React.FC = () => {
+const ReduxDistributed = () => {
   return (
     <>
       <RenderCount />
@@ -22,7 +22,7 @@ const ReduxDistributed: React.FC = () => {
   );
 };
 
-const ReduxDistributedWrapper: React.FC = () => {
+const ReduxDistributedWrapper = () => {
   return (
     <Provider store={store}>
       <ReduxDistributed />

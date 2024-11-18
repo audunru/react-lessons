@@ -1,9 +1,8 @@
-import React from "react";
 import { NavLink } from "react-router-dom";
 
 import RenderCount from "../../components/render-count";
 
-const CssOnly: React.FC = () => {
+const CssOnly = () => {
   return (
     <>
       <RenderCount />

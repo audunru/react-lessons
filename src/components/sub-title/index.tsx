@@ -1,6 +1,6 @@
-import React, { PropsWithChildren } from "react";
+import { PropsWithChildren } from "react";
 
-const SubTitle: React.FC<PropsWithChildren> = (props) => (
+const SubTitle = (props: PropsWithChildren) => (
   <h2 className="text-2xl font-bold dark:text-gray-100 max-w-2xl">{props.children}</h2>
 );
 

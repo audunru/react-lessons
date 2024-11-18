@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import { useEffect } from "react";
 import { Provider } from "react-redux";
 
 import Alert from "../../components/alert";
@@ -54,7 +54,7 @@ const Todo = () => {
   );
 };
 
-const ReduxAsyncThunkDistributed: React.FC = () => {
+const ReduxAsyncThunkDistributed = () => {
   return (
     <>
       <RenderCount />
@@ -66,7 +66,7 @@ const ReduxAsyncThunkDistributed: React.FC = () => {
   );
 };
 
-const ReduxAsyncThunkDistributedWrapper: React.FC = () => {
+const ReduxAsyncThunkDistributedWrapper = () => {
   return (
     <Provider store={store}>
       <ReduxAsyncThunkDistributed />

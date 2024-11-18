@@ -6,7 +6,7 @@ import Paragraph from "../../components/paragraph";
 import RenderCount from "../../components/render-count";
 import { getTodo, Todo } from "../6-fetch";
 
-const ReactQuery: React.FC = () => {
+const ReactQuery = () => {
   const { data: value, isLoading } = useQuery<Todo>({
     queryKey: ["todo", 1],
     queryFn: getTodo,

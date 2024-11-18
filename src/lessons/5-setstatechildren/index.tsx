@@ -8,7 +8,7 @@ const Child = () => {
   return <RenderCount />;
 };
 
-const Parent: React.FC<PropsWithChildren> = (props: PropsWithChildren) => {
+const Parent = (props: PropsWithChildren) => {
   const [count, setCount] = useState<number>(0);
 
   const handleClick = () => {

@@ -7,7 +7,7 @@ import Menu from "../menu";
 import MenuItems from "../menu/menu-items";
 import useHandle from "../render-count/useHandle";
 
-const Container: React.FC<PropsWithChildren> = (props: PropsWithChildren) => {
+const Container = (props: PropsWithChildren) => {
   const handle = useHandle();
   return (
     <>

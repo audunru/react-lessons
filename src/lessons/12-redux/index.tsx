@@ -5,13 +5,13 @@ import Paragraph from "../../components/paragraph";
 import RenderCount from "../../components/render-count";
 import { receivedValue, selectValue, store, useAppDispatch } from "./store";
 
-export const ValueSetter: React.FC = () => {
+export const ValueSetter = () => {
   const dispatch = useAppDispatch();
 
   return <Button onClick={() => dispatch(receivedValue(new Date().toISOString()))}>Update</Button>;
 };
 
-const Redux: React.FC = () => {
+const Redux = () => {
   const value = useSelector(selectValue);
 
   return (
@@ -25,7 +25,7 @@ const Redux: React.FC = () => {
   );
 };
 
-const ReduxWrapper: React.FC = () => {
+const ReduxWrapper = () => {
   return (
     <Provider store={store}>
       <Redux />

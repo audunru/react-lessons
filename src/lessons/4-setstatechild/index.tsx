@@ -8,7 +8,7 @@ const Child = () => {
   return <RenderCount />;
 };
 
-const UseStateWithChild: React.FC = () => {
+const UseStateWithChild = () => {
   const [count, setCount] = useState<number>(0);
 
   const handleClick = () => {

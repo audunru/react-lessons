@@ -1,4 +1,4 @@
-import React, { createContext, ReactNode, useContext, useState } from "react";
+import { createContext, PropsWithChildren, useContext, useState } from "react";
 
 interface ContextProps {
   value: string;
@@ -7,10 +7,10 @@ interface ContextProps {
 
 const MyContext = createContext<ContextProps | null>(null);
 
-export const MyProvider: React.FC<{ children: ReactNode }> = ({ children }) => {
+export const MyProvider = (props: PropsWithChildren) => {
   const [value, setValue] = useState(new Date().toISOString());
 
-  return <MyContext.Provider value={{ value, setValue }}>{children}</MyContext.Provider>;
+  return <MyContext.Provider value={{ value, setValue }}>{props.children}</MyContext.Provider>;
 };
 
 export const useMyContext = () => {

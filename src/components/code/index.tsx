@@ -3,7 +3,7 @@ import "highlight.js/styles/github-dark.css";
 import hljs from "highlight.js/lib/core";
 import typescript from "highlight.js/lib/languages/typescript";
 import xml from "highlight.js/lib/languages/xml";
-import React, { useEffect, useRef } from "react";
+import { useEffect, useRef } from "react";
 
 hljs.registerLanguage("typescript", typescript);
 hljs.registerLanguage("xml", xml);
@@ -14,7 +14,7 @@ interface CodeProps {
   language?: string;
 }
 
-const Code: React.FC<CodeProps> = ({ children, language = "typescript", title }) => {
+const Code = ({ children, language = "typescript", title }: CodeProps) => {
   const codeRef = useRef<HTMLElement>(null);
 
   useEffect(() => {
