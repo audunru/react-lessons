@@ -17,9 +17,9 @@ const Parent = (props: PropsWithChildren) => {
 
   return (
     <>
-      {props.children}
-
       <Button onClick={handleClick}>{`Click count: ${count.toString(10)}`}</Button>
+
+      {props.children}
     </>
   );
 };

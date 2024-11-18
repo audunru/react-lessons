@@ -11,11 +11,11 @@ const ReactHookForm = () => {
 
   return (
     <>
-      <RenderCount />
-
       <Paragraph>You will still be able to access the input value when the form is submitted.</Paragraph>
 
       <Input label="Input" {...register("value")} />
+
+      <RenderCount />
     </>
   );
 };

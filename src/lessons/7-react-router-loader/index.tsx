@@ -16,8 +16,6 @@ const ReactRouterLoader = () => {
 
   return (
     <>
-      <RenderCount />
-
       <Paragraph>
         The first time you navigate to this page, data is loaded before the render starts. This means only one render is
         required.
@@ -32,6 +30,8 @@ const ReactRouterLoader = () => {
       {navigation.state === "loading" && <Loader />}
 
       <Code title="API response">{JSON.stringify(value, null, 2)}</Code>
+
+      <RenderCount />
     </>
   );
 };

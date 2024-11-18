@@ -29,7 +29,7 @@ const Code = ({ children, language = "typescript", title }: CodeProps) => {
   }, [children, language]);
 
   return (
-    <div className="relative">
+    <>
       {title && <SubTitle>{title}</SubTitle>}
       <pre className="font-mono relative">
         <CopyButton text={children} />
@@ -37,7 +37,7 @@ const Code = ({ children, language = "typescript", title }: CodeProps) => {
           {children}
         </code>
       </pre>
-    </div>
+    </>
   );
 };
 

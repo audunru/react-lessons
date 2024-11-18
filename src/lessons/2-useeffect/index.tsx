@@ -15,9 +15,9 @@ const UseEffect = () => {
 
   return (
     <>
-      <RenderCount />
-
       <Paragraph>{`Value is now ${count.toString(10)}`}</Paragraph>
+
+      <RenderCount />
     </>
   );
 };

@@ -4,7 +4,6 @@ import Box from "../../components/box";
 import Input from "../../components/input";
 import Paragraph from "../../components/paragraph";
 import RenderCount from "../../components/render-count";
-import Counter from "../../components/render-count/counter";
 import Stack from "../../components/stack";
 
 interface ValueProps {
@@ -16,7 +15,7 @@ export const Value = (props: ValueProps) => {
     <>
       <Paragraph>Value is {props.value}</Paragraph>
 
-      <Counter />
+      <RenderCount />
     </>
   );
 };
@@ -27,8 +26,6 @@ const Props = () => {
 
   return (
     <>
-      <RenderCount />
-
       <Stack>
         <Box>
           <Input

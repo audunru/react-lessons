@@ -15,8 +15,6 @@ const ReactQuery = () => {
 
   return (
     <>
-      <RenderCount />
-
       <Paragraph>
         The first time this component is rendered, data has to be fetched and will cause a rerender.
       </Paragraph>
@@ -32,6 +30,8 @@ const ReactQuery = () => {
       {isLoading && <Loader />}
 
       {value && <Code title="API response">{JSON.stringify(value, null, 2)}</Code>}
+
+      <RenderCount />
     </>
   );
 };

@@ -34,8 +34,6 @@ const ReduxAsyncThunk = () => {
 
   return (
     <>
-      <RenderCount />
-
       <Paragraph>
         During the first render, the <code>fetchTodo</code> action is dispatched. It is async, and several things will
         happen before the promise is resolved. First, the status is set to <strong>loading</strong>, which triggers a
@@ -47,6 +45,8 @@ const ReduxAsyncThunk = () => {
       {isFailed && <Alert type="error">{error?.message}</Alert>}
 
       {isLoaded && <Code title="API response">{JSON.stringify(todo, null, 2)}</Code>}
+
+      <RenderCount />
     </>
   );
 };

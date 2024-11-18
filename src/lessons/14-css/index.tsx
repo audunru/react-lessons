@@ -2,7 +2,6 @@ import { PropsWithChildren, useState } from "react";
 
 import Button from "../../components/button";
 import RenderCount from "../../components/render-count";
-import Counter from "../../components/render-count/counter";
 
 const ToggleButton = (props: PropsWithChildren) => {
   const [isActive, setIsActive] = useState<boolean>(false);
@@ -28,10 +27,8 @@ const ToggleButton = (props: PropsWithChildren) => {
 const Css = () => {
   return (
     <>
-      <RenderCount />
-
       <ToggleButton>
-        <Counter />
+        <RenderCount />
       </ToggleButton>
     </>
   );

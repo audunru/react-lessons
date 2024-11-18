@@ -3,7 +3,6 @@ import React, { useState } from "react";
 import Box from "../../components/box";
 import Input from "../../components/input";
 import Paragraph from "../../components/paragraph";
-import RenderCount from "../../components/render-count";
 import Stack from "../../components/stack";
 import { Value } from "../19-props";
 
@@ -15,8 +14,6 @@ const Memo = () => {
 
   return (
     <>
-      <RenderCount />
-
       <Paragraph>
         Splitting a large component into multiple components, and moving state down to where it is needed will achieve
         the same effect.

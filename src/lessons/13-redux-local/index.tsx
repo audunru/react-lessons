@@ -13,9 +13,11 @@ const ValueDisplay = () => {
 const ReduxDistributed = () => {
   return (
     <>
-      <RenderCount />
       <ValueDisplay />
+
       <ValueSetter />
+
+      <RenderCount />
     </>
   );
 };

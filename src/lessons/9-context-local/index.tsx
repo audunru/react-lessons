@@ -12,9 +12,11 @@ export const ShowContext = () => {
 const ReactContextLocal = () => {
   return (
     <>
-      <RenderCount />
       <ShowContext />
+
       <UpdateContext />
+
+      <RenderCount />
     </>
   );
 };

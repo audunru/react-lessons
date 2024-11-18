@@ -57,11 +57,11 @@ const Todo = () => {
 const ReduxAsyncThunkDistributed = () => {
   return (
     <>
-      <RenderCount />
-
       <LoadingIndicator />
 
       <Todo />
+
+      <RenderCount />
     </>
   );
 };

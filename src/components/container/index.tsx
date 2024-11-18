@@ -3,9 +3,9 @@ import { Helmet } from "react-helmet";
 import { ScrollRestoration } from "react-router-dom";
 
 import Footer from "../footer";
+import useHandle from "../introduction/useHandle";
 import Menu from "../menu";
 import MenuItems from "../menu/menu-items";
-import useHandle from "../render-count/useHandle";
 
 const Container = (props: PropsWithChildren) => {
   const handle = useHandle();

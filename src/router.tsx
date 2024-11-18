@@ -5,6 +5,7 @@ import { createHashRouter, Outlet, RouteObject } from "react-router-dom";
 
 import Container from "./components/container";
 import ErrorElement from "./components/error";
+import Introduction from "./components/introduction";
 import Code from "./components/lesson-code";
 import RendersOnce from "./lessons/1-renders";
 import RendersOnceCode from "./lessons/1-renders?raw";
@@ -66,6 +67,7 @@ export const lessons: RouteObject[] = [
     path: "/1-functional-components",
     element: (
       <>
+        <Introduction />
         <RendersOnce />
         <Code>{RendersOnceCode}</Code>
       </>
@@ -81,6 +83,7 @@ export const lessons: RouteObject[] = [
     path: "/2-use-effect",
     element: (
       <>
+        <Introduction />
         <UseEffect />
         <Code>{UseEffectCode}</Code>
       </>
@@ -96,6 +99,7 @@ export const lessons: RouteObject[] = [
     path: "/3-use-state",
     element: (
       <>
+        <Introduction />
         <SetState />
         <Code>{SetStateCode}</Code>
       </>
@@ -110,6 +114,7 @@ export const lessons: RouteObject[] = [
     path: "/4-use-state-child",
     element: (
       <>
+        <Introduction />
         <SetStateChild />
         <Code>{SetStateChildCode}</Code>
       </>
@@ -125,6 +130,7 @@ export const lessons: RouteObject[] = [
     path: "/5-use-state-children",
     element: (
       <>
+        <Introduction />
         <SetStateChildrenContainer />
         <Code>{SetStateChildrenContainerCode}</Code>
       </>
@@ -139,6 +145,7 @@ export const lessons: RouteObject[] = [
     path: "/6-fetch",
     element: (
       <>
+        <Introduction />
         <Fetch />
         <Code>{FetchCode}</Code>
       </>
@@ -154,6 +161,7 @@ export const lessons: RouteObject[] = [
     path: "/7-react-router-dom-loader",
     element: (
       <>
+        <Introduction />
         <ReactRouterLoader />
         <Code>{ReactRouterLoaderCode}</Code>
       </>
@@ -169,6 +177,7 @@ export const lessons: RouteObject[] = [
     path: "/8-react-context",
     element: (
       <>
+        <Introduction />
         <ReactContextContainer />
         <Code>{ReactContextContainerCode}</Code>
       </>
@@ -184,6 +193,7 @@ export const lessons: RouteObject[] = [
     path: "/9-react-context-distributed",
     element: (
       <>
+        <Introduction />
         <ReactContextLocalContainer />
         <Code>{ReactContextLocalContainerCode}</Code>
       </>
@@ -199,6 +209,7 @@ export const lessons: RouteObject[] = [
     path: "/10-form",
     element: (
       <>
+        <Introduction />
         <Form />
         <Code>{FormCode}</Code>
       </>
@@ -213,6 +224,7 @@ export const lessons: RouteObject[] = [
     path: "/11-react-hook-form",
     element: (
       <>
+        <Introduction />
         <ReactHookForm />
         <Code>{ReactHookFormCode}</Code>
       </>
@@ -227,6 +239,7 @@ export const lessons: RouteObject[] = [
     path: "/12-redux",
     element: (
       <>
+        <Introduction />
         <ReduxContainer />
         <Code>{ReduxContainerCode}</Code>
       </>
@@ -242,6 +255,7 @@ export const lessons: RouteObject[] = [
     path: "/13-redux-distributed",
     element: (
       <>
+        <Introduction />
         <ReduxLocalContainer />
         <Code>{ReduxLocalContainerCode}</Code>
       </>
@@ -257,6 +271,7 @@ export const lessons: RouteObject[] = [
     path: "/14-css",
     element: (
       <>
+        <Introduction />
         <Css />
         <Code>{CssCode}</Code>
       </>
@@ -276,6 +291,7 @@ export const lessons: RouteObject[] = [
     path: "/15-css-only",
     element: (
       <>
+        <Introduction />
         <CssOnly />
         <Code>{CssOnlyCode}</Code>
       </>
@@ -291,6 +307,7 @@ export const lessons: RouteObject[] = [
     path: "/16-react-query",
     element: (
       <>
+        <Introduction />
         <ReactQuery />
         <Code>{ReactQueryCode}</Code>
       </>
@@ -305,6 +322,7 @@ export const lessons: RouteObject[] = [
     path: "/17-redux-async-thunk",
     element: (
       <>
+        <Introduction />
         <ReduxAsyncThunk />
         <Code>{ReduxAsyncThunkCode}</Code>
       </>
@@ -324,6 +342,7 @@ export const lessons: RouteObject[] = [
     path: "/18-redux-async-thunk-distributed",
     element: (
       <>
+        <Introduction />
         <ReduxAsyncThunkDistributed />
         <Code>{ReduxAsyncThunkDistributedCode}</Code>
       </>
@@ -339,6 +358,7 @@ export const lessons: RouteObject[] = [
     path: "/19-props",
     element: (
       <>
+        <Introduction />
         <Props />
         <Code>{PropsCode}</Code>
       </>
@@ -354,6 +374,7 @@ export const lessons: RouteObject[] = [
     path: "/20-memo",
     element: (
       <>
+        <Introduction />
         <Memo />
         <Code>{MemoCode}</Code>
       </>

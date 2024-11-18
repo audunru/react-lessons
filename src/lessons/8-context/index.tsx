@@ -18,11 +18,11 @@ const ReactContext = () => {
 
   return (
     <>
-      <RenderCount />
-
       <Paragraph>Last updated: {value}</Paragraph>
 
       <UpdateContext />
+
+      <RenderCount />
     </>
   );
 };
