@@ -6,7 +6,7 @@ const About = () => {
   return (
     <>
       <Title>React Lessons</Title>
-      <Paragraph>A collection of examples how common React patterns affect client side rendering.</Paragraph>
+      <Paragraph>A collection of examples of how common React patterns affect client side rendering.</Paragraph>
       <SubTitle>Recommendations and general tips</SubTitle>
       <Paragraph>Make multiple, smaller components instead of big ones.</Paragraph>
       <Paragraph>
