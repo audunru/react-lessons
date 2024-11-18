@@ -30,6 +30,8 @@ const RenderCount = () => {
   const bgColorClass = bgColors[(count.current - 1) % bgColors.length];
   const textColorClass = textColors[(count.current - 1) % bgColors.length];
 
+  console.log(`Render count: ${count.current.toString(10)} on ${window.location.hash}`);
+
   return (
     <p className="text-xl" role="status" aria-live="polite">
       <span className="dark:text-gray-100">Render count:</span>

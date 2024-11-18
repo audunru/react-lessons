@@ -15,8 +15,8 @@ import SetState from "./lessons/3-setstate";
 import SetStateCode from "./lessons/3-setstate?raw";
 import SetStateChild from "./lessons/4-setstatechild";
 import SetStateChildCode from "./lessons/4-setstatechild?raw";
-import SetStateChildrenContainer from "./lessons/5-setstatechildren";
-import SetStateChildrenContainerCode from "./lessons/5-setstatechildren?raw";
+import SetStateWithChildrenContainer from "./lessons/5-setstatechildren";
+import SetStateWithChildrenContainerCode from "./lessons/5-setstatechildren?raw";
 import Fetch from "./lessons/6-fetch";
 import FetchCode from "./lessons/6-fetch?raw";
 import ReactRouterLoader, { loader as reactRouterLoader } from "./lessons/7-react-router-loader";
@@ -33,8 +33,8 @@ import ReduxContainer from "./lessons/12-redux";
 import ReduxContainerCode from "./lessons/12-redux?raw";
 import ReduxLocalContainer from "./lessons/13-redux-distributed";
 import ReduxLocalContainerCode from "./lessons/13-redux-distributed?raw";
-import Css from "./lessons/14-css";
-import CssCode from "./lessons/14-css?raw";
+import Css from "./lessons/14-css-toggle";
+import CssCode from "./lessons/14-css-toggle?raw";
 import CssOnly from "./lessons/15-css-only";
 import CssOnlyCode from "./lessons/15-css-only?raw";
 import ReactQuery from "./lessons/16-react-query";
@@ -47,6 +47,12 @@ import Props from "./lessons/19-props";
 import PropsCode from "./lessons/19-props?raw";
 import Memo from "./lessons/20-memo";
 import MemoCode from "./lessons/20-memo?raw";
+import StateToggle from "./lessons/21-state-toggle";
+import StateToggleCode from "./lessons/21-state-toggle?raw";
+import StateToggleWithChildren from "./lessons/22-state-toggle-children";
+import StateToggleWithChildrenCode from "./lessons/22-state-toggle-children?raw";
+import StateToggleWithUnmount from "./lessons/23-state-toggle-unmount";
+import StateToggleWithUnmountCode from "./lessons/23-state-toggle-unmount?raw";
 import About from "./pages/about";
 
 export interface Handle {
@@ -131,8 +137,8 @@ export const lessons: RouteObject[] = [
     element: (
       <>
         <Introduction />
-        <SetStateChildrenContainer />
-        <Code>{SetStateChildrenContainerCode}</Code>
+        <SetStateWithChildrenContainer />
+        <Code>{SetStateWithChildrenContainerCode}</Code>
       </>
     ),
     handle: {
@@ -268,7 +274,53 @@ export const lessons: RouteObject[] = [
     } satisfies Handle,
   },
   {
-    path: "/14-css",
+    path: "/21-state-toggle",
+    element: (
+      <>
+        <Introduction />
+        <StateToggle />
+        <Code>{StateToggleCode}</Code>
+      </>
+    ),
+    handle: {
+      group: "CSS",
+      title: "State Toggle",
+      description:
+        "The toggle button controls a CSS class on a div wrapped around the counter. When the button is clicked, the entire component, including the counter, rerenders.",
+    } satisfies Handle,
+  },
+  {
+    path: "/21-state-toggle-children",
+    element: (
+      <>
+        <Introduction />
+        <StateToggleWithChildren />
+        <Code>{StateToggleWithChildrenCode}</Code>
+      </>
+    ),
+    handle: {
+      group: "CSS",
+      title: "State Toggle with children",
+      description: "The toggle button controls visibility using CSS, and using the children prop prevents rerendering.",
+    } satisfies Handle,
+  },
+  {
+    path: "/21-state-toggle-unmount",
+    element: (
+      <>
+        <Introduction />
+        <StateToggleWithUnmount />
+        <Code>{StateToggleWithUnmountCode}</Code>
+      </>
+    ),
+    handle: {
+      group: "CSS",
+      title: "State Toggle with unmount",
+      description: "The toggle button controls visibility by adding or removing the children from the component tree.",
+    } satisfies Handle,
+  },
+  {
+    path: "/14-css-toggle",
     element: (
       <>
         <Introduction />
@@ -403,4 +455,12 @@ const routes: RouteObject[] = [
   },
 ];
 
-export const router = createHashRouter(routes);
+export const router = createHashRouter(routes, {
+  future: {
+    v7_relativeSplatPath: true,
+    v7_partialHydration: true,
+    v7_skipActionErrorRevalidation: true,
+    v7_normalizeFormMethod: true,
+    v7_fetcherPersist: true,
+  },
+});

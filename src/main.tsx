@@ -11,7 +11,7 @@ const queryClient = new QueryClient();
 if (rootElement) {
   createRoot(rootElement).render(
     <QueryClientProvider client={queryClient}>
-      <RouterProvider router={router} />
+      <RouterProvider router={router} future={{ v7_startTransition: true }} />
     </QueryClientProvider>,
   );
 }
