@@ -37,7 +37,6 @@ const Fetch = () => {
   return (
     <>
       {value ? <Code title="API response">{JSON.stringify(value, null, 2)}</Code> : <Loader />}
-
       <RenderCount />
     </>
   );

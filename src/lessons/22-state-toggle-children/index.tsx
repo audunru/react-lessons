@@ -16,7 +16,6 @@ const ToggleButton = (props: PropsWithChildren) => {
       <Button aria-expanded={isActive} onClick={handleClick}>
         {isActive ? "Hide" : "Show"}
       </Button>
-
       <div className={clsx(!isActive && "hidden")}>{props.children}</div>
     </>
   );

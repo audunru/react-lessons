@@ -19,9 +19,7 @@ const ReactContext = () => {
   return (
     <>
       <Paragraph>Last updated: {value}</Paragraph>
-
       <UpdateContext />
-
       <RenderCount />
     </>
   );

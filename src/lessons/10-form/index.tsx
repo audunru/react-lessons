@@ -13,7 +13,6 @@ const Form = () => {
   return (
     <>
       <Input label="Input" onChange={handleChange} value={value} />
-
       <RenderCount />
     </>
   );

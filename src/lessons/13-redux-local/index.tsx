@@ -14,9 +14,7 @@ const ReduxDistributed = () => {
   return (
     <>
       <ValueDisplay />
-
       <ValueSetter />
-
       <RenderCount />
     </>
   );

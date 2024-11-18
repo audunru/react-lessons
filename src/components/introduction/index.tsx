@@ -8,7 +8,6 @@ const Introduction = () => {
   return (
     <>
       <Title>{handle?.title}</Title>
-
       <Ingress>{handle?.description}</Ingress>
     </>
   );

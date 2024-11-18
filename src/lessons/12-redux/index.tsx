@@ -17,9 +17,7 @@ const Redux = () => {
   return (
     <>
       <Paragraph>Last updated: {value}</Paragraph>
-
       <ValueSetter />
-
       <RenderCount />
     </>
   );

@@ -37,7 +37,6 @@ const Props = () => {
           />
           <Value value={valueA} />
         </Box>
-
         <Box>
           <Input
             label="Input B"

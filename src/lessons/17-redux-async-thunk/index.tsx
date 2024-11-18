@@ -39,13 +39,9 @@ const ReduxAsyncThunk = () => {
         happen before the promise is resolved. First, the status is set to <strong>loading</strong>, which triggers a
         second render. A third render is performed when the data has been received.
       </Paragraph>
-
       {isLoading && <Loader />}
-
       {isFailed && <Alert type="error">{error?.message}</Alert>}
-
       {isLoaded && <Code title="API response">{JSON.stringify(todo, null, 2)}</Code>}
-
       <RenderCount />
     </>
   );

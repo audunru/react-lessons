@@ -11,7 +11,6 @@ const CssOnly = () => {
       >
         Go to home
       </NavLink>
-
       <RenderCount />
     </>
   );

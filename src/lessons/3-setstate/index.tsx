@@ -13,7 +13,6 @@ const UseState = () => {
   return (
     <>
       <Button onClick={handleClick}>{`Click count: ${count.toString(10)}`}</Button>
-
       <RenderCount />
     </>
   );

@@ -16,7 +16,6 @@ const StateToggle = () => {
       <Button aria-expanded={isActive} onClick={handleClick}>
         {isActive ? "Hide" : "Show"}
       </Button>
-
       <div className={clsx(!isActive && "hidden")}>
         <RenderCount />
       </div>

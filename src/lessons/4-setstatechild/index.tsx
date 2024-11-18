@@ -18,7 +18,6 @@ const UseStateWithChild = () => {
   return (
     <>
       <Button onClick={handleClick}>{`Click count: ${count.toString(10)}`}</Button>
-
       <Child />
     </>
   );

@@ -48,7 +48,6 @@ const Todo = () => {
   return (
     <>
       {isFailed && <Alert type="error">{error?.message}</Alert>}
-
       {isLoaded && <Code title="API response">{JSON.stringify(todo, null, 2)}</Code>}
     </>
   );
@@ -58,9 +57,7 @@ const ReduxAsyncThunkDistributed = () => {
   return (
     <>
       <LoadingIndicator />
-
       <Todo />
-
       <RenderCount />
     </>
   );

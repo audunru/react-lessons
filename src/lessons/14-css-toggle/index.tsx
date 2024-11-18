@@ -15,7 +15,6 @@ const ToggleButton = (props: PropsWithChildren) => {
       <Button aria-expanded={isActive} onClick={handleClick} className="peer">
         {isActive ? "Hide" : "Show"}
       </Button>
-
       <div className="hidden peer-aria-expanded:block">{props.children}</div>
     </>
   );

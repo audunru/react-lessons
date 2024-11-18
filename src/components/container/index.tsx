@@ -14,7 +14,6 @@ const Container = (props: PropsWithChildren) => {
       <Helmet>
         <title>{handle?.title} - React Lessons</title>
       </Helmet>
-
       <div className="container mx-auto px-4">
         <ScrollRestoration />
         <main

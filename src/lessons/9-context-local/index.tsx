@@ -13,9 +13,7 @@ const ReactContextLocal = () => {
   return (
     <>
       <ShowContext />
-
       <UpdateContext />
-
       <RenderCount />
     </>
   );

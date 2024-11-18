@@ -30,7 +30,6 @@ const Memo = () => {
           />
           <MemoizedValue value={valueA} />
         </Box>
-
         <Box>
           <Input
             label="Input B"

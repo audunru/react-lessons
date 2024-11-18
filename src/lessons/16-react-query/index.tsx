@@ -26,11 +26,8 @@ const ReactQuery = () => {
         If you navigate away and come back <em>after</em> 10 seconds, data will be fetched again, but if it has not
         changed the component will still only be rendered once.
       </Paragraph>
-
       {isLoading && <Loader />}
-
       {value && <Code title="API response">{JSON.stringify(value, null, 2)}</Code>}
-
       <RenderCount />
     </>
   );
