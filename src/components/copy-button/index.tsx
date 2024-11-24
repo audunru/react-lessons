@@ -14,7 +14,7 @@ const CopyButton = (props: CopyButtonProps) => {
   return (
     <button
       onClick={() => void handleCopy()}
-      className="absolute top-2 right-2 bg-gray-800 text-white text-sm px-2 py-1 rounded hover:bg-gray-700"
+      className="absolute right-2 top-2 rounded bg-gray-800 px-2 py-1 text-sm text-white hover:bg-gray-700"
     >
       Copy
     </button>

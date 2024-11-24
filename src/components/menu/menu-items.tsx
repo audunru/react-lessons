@@ -24,14 +24,14 @@ const MenuItems = () => {
     <nav
       aria-label="Main menu"
       className={
-        "hidden peer-aria-expanded:flex peer-aria-expanded:mt-3 flex-col lg:mt-0 lg:flex z-10 bg-gray-100 text-gray-900 dark:bg-gray-800 dark:text-white px-4 py-2 rounded-lg shadow-md absolute lg:static"
+        "absolute z-10 hidden flex-col rounded-lg bg-gray-100 px-4 py-2 text-gray-900 shadow-md peer-aria-expanded:mt-3 peer-aria-expanded:flex dark:bg-gray-800 dark:text-white lg:static lg:mt-0 lg:flex"
       }
     >
       {Object.entries(groupedLessons).map(([groupName, lessons]) => (
         <React.Fragment key={groupName || "noGroup"}>
-          {groupName && <strong className="text-2xl dark:text-gray-100 mt-5 mb-1">{groupName}</strong>}
+          {groupName && <strong className="mb-1 mt-5 text-2xl dark:text-gray-100">{groupName}</strong>}
           {lessons.map((lesson) => (
-            <div key={lesson.path} className="border-b-2 border-gray-300 dark:border-gray-600 last:border-b-0">
+            <div key={lesson.path} className="border-b-2 border-gray-300 last:border-b-0 dark:border-gray-600">
               <MenuLink path={lesson.path ?? "/404-not-found"}>{(lesson.handle as Handle).title}</MenuLink>
             </div>
           ))}

@@ -37,7 +37,7 @@ const RenderCount = () => {
       <span className="dark:text-gray-100">Render count:</span>
       <span
         className={clsx(
-          "inline-block w-8 h-8 text-center text-gray-800 rounded-full ml-3",
+          "ml-3 inline-block size-8 rounded-full text-center text-gray-800",
           bgColorClass,
           textColorClass,
         )}

@@ -31,7 +31,7 @@ const Code = ({ children, language = "typescript", title }: CodeProps) => {
   return (
     <>
       {title && <SubTitle>{title}</SubTitle>}
-      <pre className="font-mono relative">
+      <pre className="relative font-mono">
         <CopyButton text={children} />
         <code ref={codeRef} className={`language-${language}`}>
           {children}

@@ -17,7 +17,7 @@ const Input = forwardRef<HTMLInputElement, InputProps>(({ label, className, ...r
         id={id}
         ref={ref}
         className={clsx(
-          "text-lg bg-gray-100 dark:bg-transparent text-gray-900 dark:text-gray-100 border-2 border-gray-400 dark:border-gray-600 p-2 rounded-lg shadow-md focus:outline-none focus:ring-2 focus:ring-blue-400 focus:border-blue-400 placeholder-gray-400 dark:placeholder-gray-500",
+          "rounded-lg border-2 border-gray-400 bg-gray-100 p-2 text-lg text-gray-900 shadow-md placeholder:text-gray-400 focus:border-blue-400 focus:outline-none focus:ring-2 focus:ring-blue-400 dark:border-gray-600 dark:bg-transparent dark:text-gray-100 dark:placeholder:text-gray-500",
           className,
         )}
         {...rest}

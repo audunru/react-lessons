@@ -7,7 +7,7 @@ interface AlertProps {
 }
 
 const Alert = ({ children, type = "info" }: AlertProps) => {
-  const classes = clsx("p-4 rounded-md border shadow-md flex items-center gap-2 text-lg", {
+  const classes = clsx("flex items-center gap-2 rounded-md border p-4 text-lg shadow-md", {
     // Light and dark mode classes for each type
     "bg-green-100 text-green-800 border-green-300 dark:bg-green-800 dark:text-green-200 dark:border-green-600":
       type === "success",

@@ -17,7 +17,7 @@ const Container = (props: PropsWithChildren) => {
       <div className="container mx-auto px-4">
         <ScrollRestoration />
         <main
-          className="flex flex-col lg:grid lg:grid-cols-[400px_auto] gap-y-6 lg:gap-y-0 lg:gap-x-20"
+          className="flex flex-col gap-y-6 lg:grid lg:grid-cols-[400px_auto] lg:gap-x-20 lg:gap-y-0"
           aria-labelledby="main-title"
         >
           <div>

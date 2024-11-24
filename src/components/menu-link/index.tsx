@@ -12,9 +12,9 @@ const MenuLink = (props: MenuLinkProps) => {
       to={props.path}
       className={({ isActive }) =>
         clsx(
-          "block text-lg py-2",
+          "block py-2 text-lg",
           isActive
-            ? "text-blue-500 dark:text-blue-700 font-bold"
+            ? "font-bold text-blue-500 dark:text-blue-700"
             : "text-gray-600 hover:text-blue-700 dark:text-gray-100 dark:hover:text-blue-600",
         )
       }
