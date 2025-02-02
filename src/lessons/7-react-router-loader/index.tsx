@@ -11,7 +11,7 @@ export const loader: LoaderFunction = async () => {
 };
 
 const ReactRouterLoader = () => {
-  const value = useLoaderData() as Todo;
+  const value: Todo = useLoaderData();
   const navigation = useNavigation();
 
   return (
