@@ -1,9 +1,7 @@
 # Simple workflow for deploying to GitHub Pages
-name: Validate and deploy to Github Pages
+name: Deploy to Github Pages
 
 on:
-  pull_request:
-    branches: [main]
   # Runs on pushes targeting the default branch
   push:
     branches: ["main"]
@@ -47,17 +45,12 @@ jobs:
         run: npm run lint
       - name: Build
         run: npm run build
-
-      # Deploy to GitHub Pages
       - name: Setup Pages
-        if: github.event_name != 'pull_request'
         uses: actions/configure-pages@v5
       - name: Upload artifact
-        if: github.event_name != 'pull_request'
         uses: actions/upload-pages-artifact@v3
         with:
           path: "./dist"
       - name: Deploy to GitHub Pages
-        if: github.event_name != 'pull_request'
         id: deployment
         uses: actions/deploy-pages@v4
