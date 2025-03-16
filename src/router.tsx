@@ -62,13 +62,7 @@ export interface Handle {
 }
 
 export const lessons: RouteObject[] = [
-  {
-    path: "/",
-    element: <About />,
-    handle: {
-      title: "About",
-    } satisfies Handle,
-  },
+  { path: "/", element: <About />, handle: { title: "About" } satisfies Handle },
   {
     path: "/1-functional-components",
     element: (
@@ -455,12 +449,4 @@ const routes: RouteObject[] = [
   },
 ];
 
-export const router = createHashRouter(routes, {
-  future: {
-    v7_relativeSplatPath: true,
-    v7_partialHydration: true,
-    v7_skipActionErrorRevalidation: true,
-    v7_normalizeFormMethod: true,
-    v7_fetcherPersist: true,
-  },
-});
+export const router = createHashRouter(routes);
