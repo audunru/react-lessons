@@ -5,6 +5,11 @@
     "ignoreUnknown": false,
     "includes": ["src/**"]
   },
+  "css": {
+    "parser": {
+      "tailwindDirectives": true
+    }
+  },
   "formatter": {
     "enabled": true,
     "indentStyle": "space",
@@ -14,15 +19,7 @@
   "linter": {
     "enabled": true,
     "rules": {
-      "recommended": true,
-      "suspicious": {
-        "noUnknownAtRules": {
-          "level": "error",
-          "options": {
-            "ignore": ["tailwind"]
-          }
-        }
-      }
+      "recommended": true
     }
   },
   "assist": {
