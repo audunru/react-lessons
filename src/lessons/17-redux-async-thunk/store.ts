@@ -1,7 +1,7 @@
 import { configureStore, createAsyncThunk, createSlice } from "@reduxjs/toolkit";
 import { useDispatch, useSelector } from "react-redux";
 
-import { getTodo, Todo } from "../6-fetch";
+import { getTodo, type Todo } from "../6-fetch";
 
 interface TodoState {
   status: "uninitialized" | "loading" | "succeeded" | "failed";

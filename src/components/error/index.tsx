@@ -1,6 +1,6 @@
 import Alert from "../alert";
 
-const Error = () => {
+const ErrorComponent = () => {
   return (
     <div className="container mx-auto px-4">
       <Alert type="error">
@@ -10,4 +10,4 @@ const Error = () => {
   );
 };
 
-export default Error;
+export default ErrorComponent;

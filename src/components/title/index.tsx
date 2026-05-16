@@ -1,7 +1,7 @@
-import { PropsWithChildren } from "react";
+import type { PropsWithChildren } from "react";
 
 const Title = (props: PropsWithChildren) => (
-  <h1 id="main-title" className="max-w-2xl text-3xl font-bold dark:text-gray-100">
+  <h1 className="max-w-2xl text-3xl font-bold dark:text-gray-100" id="main-title">
     {props.children}
   </h1>
 );

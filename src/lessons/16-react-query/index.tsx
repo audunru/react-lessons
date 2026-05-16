@@ -4,7 +4,7 @@ import Code from "../../components/code";
 import Loader from "../../components/loader";
 import Paragraph from "../../components/paragraph";
 import RenderCount from "../../components/render-count";
-import { getTodo, Todo } from "../6-fetch";
+import { getTodo, type Todo } from "../6-fetch";
 
 const ReactQuery = () => {
   const { data: value, isLoading } = useQuery<Todo>({

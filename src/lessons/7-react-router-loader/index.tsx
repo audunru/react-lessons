@@ -1,10 +1,10 @@
-import { LoaderFunction, useLoaderData, useNavigation } from "react-router-dom";
+import { type LoaderFunction, useLoaderData, useNavigation } from "react-router-dom";
 
 import Code from "../../components/code";
 import Loader from "../../components/loader";
 import Paragraph from "../../components/paragraph";
 import RenderCount from "../../components/render-count";
-import { getTodo, Todo } from "../6-fetch";
+import { getTodo, type Todo } from "../6-fetch";
 
 export const loader: LoaderFunction = async () => {
   return getTodo();

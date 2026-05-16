@@ -9,7 +9,6 @@ interface MenuLinkProps {
 const MenuLink = (props: MenuLinkProps) => {
   return (
     <NavLink
-      to={props.path}
       className={({ isActive }) =>
         clsx(
           "block py-2 text-lg",
@@ -18,6 +17,7 @@ const MenuLink = (props: MenuLinkProps) => {
             : "text-gray-600 hover:text-blue-700 dark:text-gray-100 dark:hover:text-blue-600",
         )
       }
+      to={props.path}
     >
       {props.children}
     </NavLink>
