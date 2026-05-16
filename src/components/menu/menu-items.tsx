@@ -1,6 +1,6 @@
 import React from "react";
 
-import { Handle, lessons } from "../../router";
+import { type Handle, lessons } from "../../router";
 import MenuLink from "../menu-link";
 
 const MenuItems = () => {
@@ -31,7 +31,7 @@ const MenuItems = () => {
         <React.Fragment key={groupName || "noGroup"}>
           {groupName && <strong className="mb-1 mt-5 text-2xl dark:text-gray-100">{groupName}</strong>}
           {lessons.map((lesson) => (
-            <div key={lesson.path} className="border-b-2 border-gray-300 last:border-b-0 dark:border-gray-600">
+            <div className="border-b-2 border-gray-300 last:border-b-0 dark:border-gray-600" key={lesson.path}>
               <MenuLink path={lesson.path ?? "/404-not-found"}>{(lesson.handle as Handle).title}</MenuLink>
             </div>
           ))}

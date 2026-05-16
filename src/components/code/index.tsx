@@ -20,6 +20,7 @@ interface CodeProps {
 const Code = ({ children, language = "typescript", title }: CodeProps) => {
   const codeRef = useRef<HTMLElement>(null);
 
+  // biome-ignore lint/correctness/useExhaustiveDependencies: children and language trigger re-highlighting after DOM updates
   useEffect(() => {
     if (codeRef.current) {
       codeRef.current.removeAttribute("data-highlighted");
@@ -33,7 +34,7 @@ const Code = ({ children, language = "typescript", title }: CodeProps) => {
       {title && <SubTitle>{title}</SubTitle>}
       <pre className="relative font-mono">
         <CopyButton text={children} />
-        <code ref={codeRef} className={`language-${language}`}>
+        <code className={`language-${language}`} ref={codeRef}>
           {children}
         </code>
       </pre>

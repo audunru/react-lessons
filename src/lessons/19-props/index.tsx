@@ -25,30 +25,28 @@ const Props = () => {
   const [valueB, setValueB] = useState<string>("");
 
   return (
-    <>
-      <Stack>
-        <Box>
-          <Input
-            label="Input A"
-            onChange={(event) => {
-              setValueA(event.target.value);
-            }}
-            value={valueA}
-          />
-          <Value value={valueA} />
-        </Box>
-        <Box>
-          <Input
-            label="Input B"
-            onChange={(event) => {
-              setValueB(event.target.value);
-            }}
-            value={valueB}
-          />
-          <Value value={valueB} />
-        </Box>
-      </Stack>
-    </>
+    <Stack>
+      <Box>
+        <Input
+          label="Input A"
+          onChange={(event) => {
+            setValueA(event.target.value);
+          }}
+          value={valueA}
+        />
+        <Value value={valueA} />
+      </Box>
+      <Box>
+        <Input
+          label="Input B"
+          onChange={(event) => {
+            setValueB(event.target.value);
+          }}
+          value={valueB}
+        />
+        <Value value={valueB} />
+      </Box>
+    </Stack>
   );
 };
 

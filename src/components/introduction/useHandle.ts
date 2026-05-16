@@ -1,6 +1,6 @@
 import { useMatches } from "react-router-dom";
 
-import { Handle } from "../../router";
+import type { Handle } from "../../router";
 
 const useHandle = (): Handle | undefined => {
   const match = useMatches();

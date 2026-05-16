@@ -33,7 +33,7 @@ const RenderCount = () => {
   console.log(`Render count: ${count.current.toString(10)} on ${window.location.hash}`);
 
   return (
-    <p className="text-xl" role="status" aria-live="polite">
+    <p aria-live="polite" className="text-xl" role="status">
       <span className="dark:text-gray-100">Render count:</span>
       <span
         className={clsx(

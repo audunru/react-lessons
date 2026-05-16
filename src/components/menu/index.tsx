@@ -1,5 +1,6 @@
 import clsx from "clsx";
-import React, { PropsWithChildren, useRef, useState } from "react";
+import type React from "react";
+import { type PropsWithChildren, useRef, useState } from "react";
 
 import Button from "../button";
 import useClickOutside from "./useClickOutside";
@@ -7,12 +8,6 @@ import useClickOutside from "./useClickOutside";
 const Menu = (props: PropsWithChildren) => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const menuRef = useRef<HTMLDivElement>(null);
-
-  const handleClick = () => {
-    if (isMenuOpen) {
-      setIsMenuOpen(false);
-    }
-  };
 
   const toggleMenu = (e: React.MouseEvent) => {
     e.stopPropagation();
@@ -26,8 +21,8 @@ const Menu = (props: PropsWithChildren) => {
   useClickOutside(menuRef, closeMenu);
 
   return (
-    <div ref={menuRef} onClick={handleClick}>
-      <Button onClick={toggleMenu} aria-expanded={isMenuOpen} className="peer flex items-center space-x-2 lg:hidden">
+    <div ref={menuRef}>
+      <Button aria-expanded={isMenuOpen} className="peer flex items-center space-x-2 lg:hidden" onClick={toggleMenu}>
         <span className="relative flex size-6 flex-col items-center justify-center">
           <span
             className={clsx(

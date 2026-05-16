@@ -1,7 +1,7 @@
 import "./index.css";
 
-import React from "react";
-import { createHashRouter, Outlet, RouteObject } from "react-router-dom";
+import type React from "react";
+import { createHashRouter, Outlet, type RouteObject } from "react-router-dom";
 
 import Container from "./components/container";
 import ErrorElement from "./components/error";

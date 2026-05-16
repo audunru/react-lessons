@@ -1,4 +1,4 @@
-import { PropsWithChildren, useState } from "react";
+import { type PropsWithChildren, useState } from "react";
 
 import Button from "../../components/button";
 import Paragraph from "../../components/paragraph";
@@ -34,11 +34,9 @@ const StateToggleWithUnmount = () => {
   // This does not rerender because the state update is limited to the ToggleButton component.
 
   return (
-    <>
-      <ToggleButton>
-        <RenderCount />
-      </ToggleButton>
-    </>
+    <ToggleButton>
+      <RenderCount />
+    </ToggleButton>
   );
 };
 
