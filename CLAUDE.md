@@ -14,7 +14,7 @@ No test suite is configured.
 
 ## Architecture
 
-A React 18 SPA that demonstrates 23 numbered lessons about rendering performance patterns. Deployed to GitHub Pages at `audunru.github.io/react-lessons/`.
+A React 19 SPA that demonstrates 23 numbered lessons about rendering performance patterns. Deployed to GitHub Pages at `audunru.github.io/react-lessons/`.
 
 ### Key directories
 
@@ -35,3 +35,5 @@ A React 18 SPA that demonstrates 23 numbered lessons about rendering performance
 - **Routing:** Hash-based (`createHashRouter`) for GitHub Pages compatibility.
 - **State examples:** Redux Toolkit (lessons 12/13/17/18), React Context (8/9), TanStack React Query (16), React Hook Form (11).
 - **TypeScript:** Strict mode, `noUnusedLocals`, `noUnusedParameters` — all unused imports/vars must be removed.
+- **Styling:** Tailwind CSS v4 with CSS-based config (`src/index.css`). Dark mode uses the `.dark` class on `<html>` via a custom CSS variant. No `tailwind.config.js`.
+- **Page title:** Set via a plain `<title>` element in `src/components/container/index.tsx` — React 19 hoists it to `<head>` natively.

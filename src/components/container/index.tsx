@@ -1,5 +1,4 @@
 import type { PropsWithChildren } from "react";
-import { Helmet } from "react-helmet";
 import { ScrollRestoration } from "react-router-dom";
 
 import Footer from "../footer";
@@ -11,9 +10,7 @@ const Container = (props: PropsWithChildren) => {
   const handle = useHandle();
   return (
     <>
-      <Helmet>
-        <title>{handle?.title} - React Lessons</title>
-      </Helmet>
+      <title>{handle?.title} - React Lessons</title>
       <div className="container mx-auto px-4">
         <ScrollRestoration />
         <main
