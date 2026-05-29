@@ -6,8 +6,3 @@ A collection of examples how common React patterns affect client side rendering.
 
 ## Development
 
-Analyze bundle size:
-
-```bash
- npx vite-bundle-visualizer -o stats.html --open
-```
