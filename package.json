@@ -20,7 +20,7 @@
 		"react-dom": "^19.2.8",
 		"react-hook-form": "^7.83.0",
 		"react-redux": "^9.3.0",
-		"react-router-dom": "^7.18.1"
+		"react-router-dom": "^7.18.4"
 	},
 	"devDependencies": {
 		"@biomejs/biome": "^2.5.5",
